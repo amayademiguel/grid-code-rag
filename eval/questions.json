@@ -1,0 +1,23 @@
+[
+  {"id": 1, "question": "What frequency ranges must a power-generating module withstand in Continental Europe, and for how long?", "articles": [13]},
+  {"id": 2, "question": "What is the rate of change of frequency withstand capability requirement?", "articles": [13]},
+  {"id": 3, "question": "How must a module reduce active power in limited frequency sensitive mode at overfrequency (LFSM-O)?", "articles": [13]},
+  {"id": 4, "question": "When does a module have to increase active power at underfrequency (LFSM-U)?", "articles": [15]},
+  {"id": 5, "question": "What are the frequency sensitive mode (FSM) requirements, such as droop and deadband?", "articles": [15]},
+  {"id": 6, "question": "What are the maximum capacity thresholds for type B, C and D modules in the Nordic synchronous area?", "articles": [5]},
+  {"id": 7, "question": "Which voltage ranges and time periods apply to a type D module connected between 110 kV and 300 kV?", "articles": [16]},
+  {"id": 8, "question": "What are the fault-ride-through parameters Uret and tclear for type D power park modules?", "articles": [16]},
+  {"id": 9, "question": "What fault-ride-through capability is required from type B power-generating modules?", "articles": [14]},
+  {"id": 10, "question": "What are the requirements for fast fault current injection of power park modules?", "articles": [20]},
+  {"id": 11, "question": "What is required for post-fault active power recovery of power park modules?", "articles": [20]},
+  {"id": 12, "question": "What reactive power capability is required at maximum capacity for type C power park modules?", "articles": [21]},
+  {"id": 13, "question": "Who can require synthetic inertia from power park modules?", "articles": [21]},
+  {"id": 14, "question": "What does the energisation operational notification for type D modules allow?", "articles": [34]},
+  {"id": 15, "question": "What is needed to obtain the final operational notification (FON)?", "articles": [36]},
+  {"id": 16, "question": "Which compliance tests apply to type D power park modules?", "articles": [49]},
+  {"id": 17, "question": "How can a power-generating facility owner request a derogation from the requirements?", "articles": [62]},
+  {"id": 18, "question": "Do the requirements apply to existing power-generating modules?", "articles": [4]},
+  {"id": 19, "question": "¿Qué parámetros de huecos de tensión (fault-ride-through) se exigen a un parque fotovoltaico de tipo D?", "articles": [16]},
+  {"id": 20, "question": "Welche Spannungsbereiche gelten für Erzeugungsanlagen vom Typ D zwischen 110 kV und 300 kV?", "articles": [16]},
+  {"id": 21, "question": "Quelles sont les exigences d'injection rapide de courant de défaut pour les parcs non synchrones de générateurs ?", "articles": [20]}
+]

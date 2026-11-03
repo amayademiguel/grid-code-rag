@@ -1,0 +1,19 @@
+# Downloaded documents and generated index (rebuilt with `python app.py build`)
+data/raw/
+data/processed/
+data/index/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets and local settings
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
