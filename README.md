@@ -138,4 +138,6 @@ eval/                      test questions and retrieval evaluation
 
 Amaya de Miguel Mediavilla, MSc student in the Erasmus Mundus master DREAM (Dynamics of Renewables-based Power Systems), École Centrale de Nantes and HTW Berlin.
 
+Developed with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant.
+
 The RfG text is © European Union, reused under the [Commission's reuse policy](https://eur-lex.europa.eu/content/legal-notice/legal-notice.html).
