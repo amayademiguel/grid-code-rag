@@ -13,7 +13,7 @@ import time
 from src.gridrag import index, ingest
 from src.gridrag.answer import ask
 from src.gridrag.config import LLM_MODEL
-from src.gridrag.retrieve import Retriever, cite
+from src.gridrag.retrieve import Retriever, cite, excerpt
 from src.gridrag.workflow import project_report
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -49,7 +49,7 @@ def main():
 
     elif args.command == "search":
         for c in Retriever().search(args.query, k=args.k, mode=args.mode):
-            print(f"\n--- {cite(c)}  (score {c['score']})\n{c['text'][:600]}")
+            print(f"\n--- {cite(c)}  (score {c['score']})\n{excerpt(c['text'], args.query)}")
 
     elif args.command == "ask":
         start = time.time()

@@ -18,6 +18,7 @@ REFERENCE_RE = re.compile(r"\b(table|figure|article)\s+(\d+(?:\.\d+)?)", re.I)  
 COMPLIANCE_ARTICLES = range(42, 58)  # compliance tests and simulations (Title IV)
 COMPLIANCE_RE = re.compile(r"test|simulat|complian|verif|demonstrat", re.I)
 RECITALS_RE = re.compile(r"recital|preamble|\bwhy\b", re.I)
+TABLE_LINE_RE = re.compile(r"Table (\d+(?:\.\d+)?)\s")  # a line that opens with a table: title or row
 
 
 def tokenize(text):
@@ -68,7 +69,7 @@ class Retriever:
         refs = REFERENCE_RE.findall(query)
         if not refs:
             return []
-        patterns = [re.compile(rf"\b{kind}\s+{re.escape(num)}(?![\d.]\d)", re.I) for kind, num in refs]
+        patterns = [re.compile(rf"\b{kind}\s+{re.escape(num)}(?!\d|\.\d)", re.I) for kind, num in refs]
         article_refs = {int(num) for kind, num in refs if kind.lower() == "article" and num.isdigit()}
         return [i for i in ranking
                 if self.chunks[i]["article"] in article_refs or any(p.search(self.chunks[i]["text"]) for p in patterns)]
@@ -92,6 +93,26 @@ class Retriever:
                 fused[idx] = fused.get(idx, 0.0) + 1.0 / (RRF_K + rank + 1)
         best = sorted(fused, key=fused.get, reverse=True)[:k]
         return [dict(self.chunks[i], score=round(fused[i], 4)) for i in best]
+
+
+def excerpt(text, query, size=600):
+    """The part of a chunk to print: a table named in the query, otherwise the beginning.
+    Only for display: the search and the answers always use the whole chunk."""
+    named = {num for kind, num in REFERENCE_RE.findall(query) if kind.lower() == "table"}
+    lines = text.splitlines()
+    block, inside = [], False
+    for line in lines[1:]:
+        start = TABLE_LINE_RE.match(line)
+        if start:
+            inside = start[1] in named
+        if inside:
+            block.append(line)
+    if not block:
+        return text[:size]
+    rows = [line for line in block if TABLE_LINE_RE.match(line)]
+    if len(rows) > 1:  # rows that carry the name of the table: leave out the text after them
+        block = rows
+    return "\n".join(lines[:1] + block)
 
 
 def cite(chunk):
