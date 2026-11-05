@@ -43,9 +43,9 @@ question ──► direct table value? ──► answered by code (tables.py), n
 
 1. **Classify** the module with a deterministic tool (Article 5, Table 1): ≥ 110 kV ⇒ type D.
 2. **Derive the applicable articles** (requirements are cumulative: a type D power park module follows Articles 13–16 and 20–22).
-3. For each requirement category (frequency, voltage, reactive power, fault-ride-through, …), **retrieve only from those articles**.
-4. **Extract** the requirements as JSON with the LLM.
-5. Return a table with the source of every requirement.
+3. **Read the requirements that are in tables with code**: frequency and voltage ranges, reactive power capability at maximum capacity, fault-ride-through parameters.
+4. For the requirements in the text, **retrieve only from those articles** and **extract** them as JSON with the LLM.
+5. Return a JSON report with the source of every requirement.
 
 The plan is fixed in code rather than left to the model: with a small local model, a code-controlled workflow is more reliable than free planning. Classification is plain code because thresholds are exact rules.
 
@@ -68,7 +68,7 @@ The right article reaches the model in 85 of 86 questions. `python -m eval.check
 
 ### Answers
 
-Full pipeline, every answer read by hand (`python -m eval.assessment`, corrections and reasons in `eval/manual_review.json`):
+110 test questions through the full pipeline: 90 used to improve the system (`python -m eval.assessment`, corrections and reasons in `eval/manual_review.json`) and 20 new ones kept apart as a check (`eval/questions_holdout.json`).
 
 | Questions | Correct | Refused | Wrong or incomplete |
 |---|---|---|---|
@@ -76,19 +76,21 @@ Full pipeline, every answer read by hand (`python -m eval.assessment`, correctio
 | Names a table | 6/6 | 0 | 0 |
 | Varied wording | 26/29 | 1 | 2 |
 | Other languages | 0/3 | 0 | 3 |
-| **In the regulation** | **74/86 (86 %)** | **1** | **11** |
-| Outside the regulation | 4/4 | | |
+| Outside the regulation | 4/4 | 0 | 0 |
+| **Used to improve it** | **78/90** | **1** | **11** |
+| **New, first run** | **17/20** | **0** | **3** |
+| **Total** | **95/110** | **1** | **14** |
 
-22 of the 90 questions are answered by code in about a second. The LLM takes about 2 minutes per answer, and a project report 35 minutes.
+22 of the 90 questions are answered by code in about a second. The LLM takes about 2 minutes per answer, and a project report 19 minutes.
 
-**These numbers are optimistic.** The system was tuned on these questions, and I wrote them knowing the regulation. As a check, `eval/questions_holdout.json` has 20 new questions that were not used for tuning: on the first run, 16 of the 19 in the regulation were correct, and the one outside it was declined. Those three errors then led to two fixes in the table reader, so that set is no longer unseen. A real test set should come from engineers' questions on past projects.
+**How far these numbers go.** Each answer was graded by Claude, an online AI model, against the text of the regulation. Claude also helped to build the system and to write the questions, and no engineer has validated the results, so they are indicative. The 90 questions are optimistic because the system was tuned on them. The three errors in the 20 new ones led to two fixes in the table reader, so that set is no longer unseen, and the table gives its first run. A real test set should come from engineers' questions on past projects.
 
 ### Where it still fails
 
 - **Other languages:** the search finds the article, but the answer is wrong. The French question gets a refusal, the German one mixes a row, and the Spanish one mixes two tables. Only the search can be relied on outside English.
 - **Wrong details in cited answers:** one answer gets the rule right and adds that ENTSO-E is the TSO in Germany, which is not in the excerpts. A citation does not guarantee that the text is right.
 - **Values in the text of an article:** when asked how LFSM-O and LFSM-U work, the answer leaves out the frequency thresholds, although they are in the excerpts.
-- **Project report:** the JSON is always valid, but the content needs checking. For a power park module at 220 kV, `informe.json` also lists synchronous values and Table 3.1, which is for connections below 110 kV.
+- **Project report:** the values in tables are read by code, for the case of the project. The rows that the LLM reads from the text need checking: it labels the LFSM-U threshold as LFSM-O, includes an option for type A and leaves some values as N/A.
 
 ## Usage
 
@@ -105,7 +107,7 @@ python app.py ask "Which frequency ranges must a module withstand in Continental
 python app.py project --mw 300 --kv 220 --out report.json
 python -m eval.evaluate         # retrieval evaluation
 python -m eval.evaluate_answers # full pipeline on the test questions (hours on a CPU)
-python -m eval.assessment       # results after the review by hand
+python -m eval.assessment       # results after the review of the answers
 ```
 
 ## Project structure
@@ -121,7 +123,7 @@ src/gridrag/answer.py      prompting, citations, structured output
 src/gridrag/tables.py      table values read by code, without the LLM
 src/gridrag/rfg_types.py   module classification (Article 5), project facts
 src/gridrag/workflow.py    project requirements report
-eval/                      test questions, retrieval and answer evaluation, review by hand
+eval/                      test questions, retrieval and answer evaluation, review of the answers
 ```
 
 ## Limitations and next steps
@@ -129,7 +131,7 @@ eval/                      test questions, retrieval and answer evaluation, revi
 - **Tables and figures:** fault-ride-through profiles and P–Q diagrams are figures; only their numeric parameters are captured. The table reader covers the direct questions it recognises; the rest go to the LLM.
 - **Cross-references:** "as specified in Article 14(3)" is not followed automatically. An agent with a `get_article` tool, or a graph of references, would.
 - **National codes and versions:** only the European baseline is indexed. The metadata already supports several jurisdictions and validity dates, so a national code (and its updates) can be added and filtered by the version in force.
-- **Evaluation of answers:** answers are checked automatically and by hand, by the author; they still need a test set validated by engineers.
+- **Evaluation of answers:** answers are checked automatically and graded by an AI model; they still need a test set validated by engineers.
 - **Human in the loop:** the tool points to the requirements and their source; an engineer still validates them.
 
 ## Author

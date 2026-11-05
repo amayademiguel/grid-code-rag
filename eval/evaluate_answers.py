@@ -7,7 +7,7 @@ For each question the test set gives the key values a correct answer must contai
   - not found: it opens by saying that the excerpts do not address the question
   - forbid: statements known to be wrong for this question (a value of another area, a wrong No)
 Questions outside the regulation (no article) are correct only if the answer is "not found".
-The check is automatic and strict on values, so failures still need reading by hand.
+The check is automatic and strict on values, so the answers still need reading one by one.
 
 Usage:  python -m eval.evaluate_answers [--model qwen2.5:7b] [--ids 8 21 44]
 """

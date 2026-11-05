@@ -1,4 +1,4 @@
-"""Results of a run after the review by hand: automatic check plus the corrections in manual_review.json.
+"""Results of a run after reading the answers: automatic check plus the corrections in manual_review.json.
 
 Usage:  python -m eval.assessment
 """

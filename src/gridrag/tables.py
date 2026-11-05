@@ -158,3 +158,37 @@ def table_answer(question, chunks):
     if not blocks:
         return None
     return {"text": "Values read from the tables of the regulation by code, not by the LLM.\n\n" + "\n\n".join(blocks), "chunks": used}
+
+
+def _report_item(chunks, category, name, requirement, area, conditions):
+    """One requirement of the report, read from a table: all the values of its row, or of the whole table."""
+    for chunk in chunks:
+        rows = _rows(chunk, name)
+        if rows:
+            if area:
+                rows = [row.split(" | ", 1)[1] for row in rows if row.startswith(area)]
+            value = "; ".join(row.split(": ", 1)[1] if "=" in row else row.replace(" | ", "; ") for row in rows)
+            notes = " ".join(re.findall(r"^\(\*+\).*$", chunk["text"], re.M)) if "(*" in value else ""
+            return {"category": category, "requirement": requirement, "value": value,
+                    "conditions": " ".join(part for part in (conditions, notes) if part),
+                    "article": f"Art. {chunk['article']}, {name}"}
+    return None
+
+
+def table_requirements(module_type, technology, connection_kv, area, chunks, offshore=False):
+    """Requirements of a project that are in tables, read by code: the LLM mixed rows of other cases."""
+    synchronous = technology == "synchronous"
+    items = [("Frequency ranges", "Table 2", "Frequency ranges and minimum time periods for operation", area, area)]
+    if connection_kv >= 110 or offshore:
+        name = "Table 10" if offshore else "Table 6.1" if connection_kv < 300 else "Table 6.2"
+        items.append(("Voltage ranges", name, "Voltage ranges and minimum time periods for operation", area, area))
+    if module_type in ("C", "D"):
+        name = "Table 11" if offshore else "Table 8" if synchronous else "Table 9"
+        items.append(("Reactive power capability", name, "Reactive power capability at maximum capacity", area, area))
+    if module_type != "A":
+        name = f"Table {7 if connection_kv >= 110 else 3}.{1 if synchronous else 2}"
+        side = "at or above" if connection_kv >= 110 else "below"
+        items.append(("Fault-ride-through", name, "Parameters of the voltage-against-time profile",
+                      None, f"Connected {side} 110 kV. The TSO specifies the profile within these ranges."))
+    found = [_report_item(chunks, *item) for item in items]
+    return [item for item in found if item]

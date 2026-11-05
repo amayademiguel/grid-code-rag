@@ -1,6 +1,6 @@
 {
   "answers_file": "eval/answers_v5_7b.json",
-  "note": "Answers read by hand. The automatic check only looks for expected text, so these are its known errors on this run.",
+  "note": "Answers read by Claude, an online AI model, against the text of the regulation. The automatic check only looks for expected text, so these are its known errors on this run.",
   "correct_but_rejected": {
     "18": "Says that the requirements do not directly apply to existing modules, with the exceptions. Right, in words that the check does not expect.",
     "53": "Gives the condition of Article 37(2) for the limited operational notification. Right, without the word FON.",
