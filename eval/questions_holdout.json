@@ -1,0 +1,22 @@
+[
+  {"id": 101, "kind": "table", "lang": "en", "question": "What are the voltage ranges for a 150 kV type D module in the Baltic area?", "articles": [16], "expect": ["0.85", "30min", "1.118"], "forbid": ["60min"]},
+  {"id": 102, "kind": "table", "lang": "en", "question": "What is the maximum Q/Pmax of a type D synchronous module in Ireland?", "articles": [18], "expect": ["1.08"], "forbid": ["0.95"]},
+  {"id": 103, "kind": "table", "lang": "en", "question": "List the frequency ranges and time periods for Great Britain.", "articles": [13], "expect": ["47.0", "20seconds", "52.0"]},
+  {"id": 104, "kind": "table", "lang": "en", "question": "What is the type C threshold in the Baltic area?", "articles": [5], "expect": ["10mw"]},
+  {"id": 105, "kind": "table", "lang": "en", "question": "What retained voltage Uret applies to a synchronous type B module?", "articles": [14], "expect": ["0.05-0.3"], "forbid": ["0.05-0.15"]},
+  {"id": 106, "kind": "table", "lang": "en", "question": "What droop is required in frequency sensitive mode?", "articles": [15], "expect": ["2-12"]},
+  {"id": 107, "kind": "table", "lang": "en", "question": "What voltage ranges apply to an offshore wind park in the Nordic area?", "articles": [25], "expect": ["1.05", "1.10"]},
+  {"id": 108, "kind": "table", "lang": "en", "question": "A 90 MW wind farm at 220 kV in Great Britain: which voltage ranges apply?", "articles": [16], "expect": ["0.90", "1.10", "unlimited"]},
+  {"id": 109, "kind": "table", "lang": "en", "question": "What reactive power capability must a type D wind farm offer in Great Britain at maximum capacity?", "articles": [21], "expect": ["0.66"], "forbid": ["0.95"]},
+  {"id": 110, "kind": "table", "lang": "en", "question": "What active power range applies in frequency sensitive mode?", "articles": [15], "expect": ["1.5", "10%"]},
+  {"id": 111, "kind": "table", "lang": "en", "question": "How long may a module at 1.1 pu and 400 kV stay connected in Great Britain?", "articles": [16], "expect": ["15min"]},
+  {"id": 112, "kind": "table", "lang": "en", "question": "At 47.2 Hz in Great Britain, how long must a module stay connected?", "articles": [13], "expect": ["20s|20seconds"]},
+  {"id": 113, "kind": "text", "lang": "en", "question": "Who specifies the rate of change of frequency that a module must withstand?", "articles": [13], "expect": ["tso"]},
+  {"id": 114, "kind": "text", "lang": "en", "question": "Must a type C module be able to take part in island operation?", "articles": [15], "expect": ["requir"]},
+  {"id": 115, "kind": "text", "lang": "en", "question": "Can the system operator require fast fault current from a type B power park module?", "articles": [20], "expect": ["right|specify|require|yes"], "forbid": ["no."]},
+  {"id": 116, "kind": "text", "lang": "en", "question": "Who can require a module to keep operating at minimum regulating level during LFSM-O?", "articles": [13], "expect": ["tso"]},
+  {"id": 117, "kind": "text", "lang": "en", "question": "Do back-up generators have to comply with the RfG?", "articles": [3], "expect": ["five|5min"]},
+  {"id": 118, "kind": "text", "lang": "en", "question": "How long is a limited operational notification valid at most?", "articles": [37], "expect": ["12months"]},
+  {"id": 119, "kind": "text", "lang": "en", "question": "Who grants a derogation from the requirements?", "articles": [3, 60, 61, 62, 63], "expect": ["regulatoryauthority"]},
+  {"id": 120, "kind": "scope", "lang": "en", "question": "What are the harmonic distortion limits for a solar inverter?", "articles": [], "expect": []}
+]

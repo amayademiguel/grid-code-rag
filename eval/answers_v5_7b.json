@@ -1,0 +1,1555 @@
+[
+  {
+    "id": 1,
+    "kind": "direct",
+    "question": "What frequency ranges must a power-generating module withstand in Continental Europe, and for how long?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13]:\n- Continental Europe | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = To be specified by each TSO, but not less than 30 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than the period for 47,5 Hz-48,5 Hz; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 30 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 2,
+    "kind": "direct",
+    "question": "What is the rate of change of frequency withstand capability requirement?",
+    "answer": "A power-generating module shall be capable of staying connected to the network and operate at rates of change of frequency up to a value specified by the relevant TSO, unless disconnection was triggered by rate-of-change-of-frequency-type loss of mains protection. The relevant system operator, in coordination with the relevant TSO, shall specify this rate-of-change-of-frequency-type loss of mains protection. [Art. 13(d)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 15, p. 23-24",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23"
+    ],
+    "seconds": 119,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 3,
+    "kind": "direct",
+    "question": "How must a module reduce active power in limited frequency sensitive mode at overfrequency (LFSM-O)?",
+    "answer": "The module shall provide a negative active power output change according to the droop S2 when operating in LFSM-O mode at overfrequencies where Δf is above Δf1. This must be done in accordance with the parameters specified by the relevant TSO within the ranges shown in Table 4 [Art. 13 (d) and (g)]. The initial delay for activating this response should be as short as possible, not exceeding two seconds unless justified by technical evidence provided to the relevant TSO [Art. 13 (e)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 15-16",
+      "RfG (EU) 2016/631, Art. 2, p. 7",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23",
+      "RfG (EU) 2016/631, Art. 13, p. 16"
+    ],
+    "seconds": 149,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 4,
+    "kind": "direct",
+    "question": "When does a module have to increase active power at underfrequency (LFSM-U)?",
+    "answer": "When the frequency deviation Δf is below Δf1, the power-generating module has to provide a positive active power output change according to the droop S2 [Art. 15(iv)]. This applies regardless of whether it is a synchronous or power park module and in any synchronous area.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 22-23",
+      "RfG (EU) 2016/631, Art. 2, p. 7",
+      "RfG (EU) 2016/631, Art. 15, p. 22",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22"
+    ],
+    "seconds": 107,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 5,
+    "kind": "direct",
+    "question": "What are the frequency sensitive mode (FSM) requirements, such as droop and deadband?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 4 (frequency sensitive mode) [Art. 15]:\n- Active power range related to maximum capacity |ΔP1|/Pmax | 1,5-10 %\n- Frequency response insensitivity | Δfi | 10-30 mHz\n- Frequency response insensitivity | Δfi/fn | 0,02-0,06 %\n- Frequency response deadband | 0-500 mHz\n- Droop s1 | 2-12 %",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 23-24"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 6,
+    "kind": "direct",
+    "question": "What are the maximum capacity thresholds for type B, C and D modules in the Nordic synchronous area?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 1 (capacity thresholds of type B, C and D per synchronous area) [Art. 5]:\n- Nordic | Maximum threshold for type B: 1,5 MW | Maximum threshold for type C: 10 MW | Maximum threshold for type D: 30 MW",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 7,
+    "kind": "direct",
+    "question": "Which voltage ranges and time periods apply to a type D module connected between 110 kV and 300 kV?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16]:\n- Continental Europe | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 60 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes\n- Nordic | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = 60 minutes\n- Great Britain | Voltage range = Time period for operation: 0,90 pu-1,10 pu = Unlimited\n- Ireland and Northern Ireland | Voltage range = Time period for operation: 0,90 pu-1,118 pu = Unlimited\n- Baltic | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 30 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = 20 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 8,
+    "kind": "direct",
+    "question": "What are the fault-ride-through parameters Uret and tclear for type D power park modules?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 3.2 (power park modules of type B and C, and type D connected below 110 kV) [Art. 14]:\n- Uret: 0,05-0,15 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret-0,15 | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0\n\nTable 7.2 (power park modules of type D connected at or above 110 kV) [Art. 16]:\n- Uret: 0 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 9,
+    "kind": "direct",
+    "question": "What fault-ride-through capability is required from type B power-generating modules?",
+    "answer": "Type B power-generating modules are required to have a fault-ride-through capability as follows:\n\n- The relevant TSO shall specify the conditions under which a power-generating module is capable of reconnecting to the network after an incidental disconnection caused by a network disturbance [Art. 4(a)].\n- Installation of automatic reconnection systems shall be subject both to prior authorisation by the relevant system operator and to the reconnection conditions specified by the relevant TSO [Art. 4(b)].\n\nFor fault-ride-through capability, the following requirements apply:\n\n- The relevant TSO shall specify a voltage-against-time-profile in line with Figure 3 at the connection point for fault conditions, which describes the conditions in which the power-generating module is capable of staying connected to the network and continuing to operate stably after the power system has been disturbed by secured faults on the transmission system [Art. 3(a)(ii)].\n- The voltage-against-time-profile shall express a lower limit of the actual course of the phase-to-phase voltages on the network voltage level at the connection point during a symmetrical fault, as a function of time before, during and after the fault [Art. 3(a)(iii)].\n- The lower limit referred to in point (ii) shall be specified by the relevant TSO using the parameters set out in Figure 3, and within the ranges set out in Tables 3.1 and 3.2 for synchronous modules below 110 kV or Table 7.1 and 7.2 for synchronous modules at or above 110 kV [Art. 3(a)(iii)].\n- The relevant TSO shall specify the pre-fault and post-fault conditions for the fault-ride-through capability in terms of:\n  - Calculation of the pre-fault minimum short circuit capacity at the connection point,\n  - Pre-fault active and reactive power operating point of the power-generating module at the connection point and voltage at the connection point, and\n  - Calculation of the post-fault minimum short circuit capacity at the connection point [Art. 3(a)(iv)].\n- At the request of a power-generating facility owner, the relevant system operator shall provide pre-fault and post-fault conditions to be considered for fault-ride-through capability as an outcome of the calculations at the connection point [Art. 4(v)].\n[Check: not among the retrieved excerpts: Art. 3, Art. 4]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 232,
+    "not_found": false,
+    "values": false,
+    "cited": false,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 10,
+    "kind": "direct",
+    "question": "What are the requirements for fast fault current injection of power park modules?",
+    "answer": "Type B power park modules shall be capable of providing fast fault current at the connection point in case of symmetrical (3-phase) faults, under the following conditions:\n\n- The relevant system operator in coordination with the relevant TSO shall specify how and when a voltage deviation is to be determined as well as the end of the voltage deviation [Art. 20(2)(ii)].\n- The characteristics of the fast fault current, including the time domain for measuring the voltage deviation and fast fault current, may differ from the method specified in Article 2 [Art. 20(2)(b)(ii)].\n- Timing and accuracy of the fast fault current, which may include several stages during a fault and after its clearance, shall be specified by the relevant system operator in coordination with the relevant TSO [Art. 20(2)(b)(iii)].\n[Check: not among the retrieved excerpts: Art. 2]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 20, p. 35-36",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19"
+    ],
+    "seconds": 81,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 11,
+    "kind": "direct",
+    "question": "What is required for post-fault active power recovery of power park modules?",
+    "answer": "The relevant TSO shall specify the post-fault active power recovery that the power park module is capable of providing and shall specify:\n- When the post-fault active power recovery begins, based on a voltage criterion; [Art. 20(a)(i)]\n- A maximum allowed time for active power recovery; [Art. 20(a)(ii)]\n- A magnitude and accuracy for active power recovery; [Art. 20(a)(iii)]\n\nFor type B and C power park modules connected below 110 kV, the TSO shall specify:\n- The voltage parameters (Uret: 0.05-0.3) and time parameters (tclear: 0.14-0.15 or 0.14-0.25 if required by system protection and secure operation). [Table 3.1]\n- For type D power park modules connected below 110 kV, the TSO shall specify:\n  - Uret: 0\n  - tclear: 0.14-0.15 or 0.14-0.25 if required by system protection and secure operation.\n  - Uclear: Uret (0)\n  - trec1: tclear\n  - Urec1: Uclear\n  - trec2: trec1-0.7\n  - Urec2: 0.85-0.9 and ≥ Uclear\n  - trec3: trec2-1.5 [Table 7.2]\n\nFor type B and C power park modules connected at or above 110 kV, the TSO shall specify:\n- Uret: 0\n- tclear: 0.14-0.15 or 0.14-0.25 if required by system protection and secure operation.\n- Uclear: Uret (0)\n- trec1: tclear\n- Urec1: Uclear\n- trec2: trec1\n- Urec2: 0.85\n- trec3: 1.5-3.0 [Table 7.2]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 20, p. 35-36",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 192,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 12,
+    "kind": "direct",
+    "question": "What reactive power capability is required at maximum capacity for type C power park modules?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 9 (reactive power capability at maximum capacity, power park modules of type C and D) [Art. 21]:\n- Continental Europe | Maximum range of Q/Pmax: 0,75 | Maximum range of steady-state voltage level in PU: 0,225\n- Nordic | Maximum range of Q/Pmax: 0,95 | Maximum range of steady-state voltage level in PU: 0,150\n- Great Britain | Maximum range of Q/Pmax: 0,66 | Maximum range of steady-state voltage level in PU: 0,225\n- Ireland and Northern Ireland | Maximum range of Q/Pmax: 0,66 | Maximum range of steady-state voltage level in PU: 0,218\n- Baltic | Maximum range of Q/Pmax: 0,80 | Maximum range of steady-state voltage level in PU: 0,220",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36-37"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 13,
+    "kind": "direct",
+    "question": "Who can require synthetic inertia from power park modules?",
+    "answer": "The relevant TSO has the right to specify that power park modules be capable of providing synthetic inertia during very fast frequency deviations. [Art. 21(2)(a)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36",
+      "RfG (EU) 2016/631, Art. 14, p. 21",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 20, p. 35"
+    ],
+    "seconds": 84,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 14,
+    "kind": "direct",
+    "question": "What does the energisation operational notification for type D modules allow?",
+    "answer": "An EON for type D power-generating modules allows the power-generating facility owner to energise its internal network and auxiliaries for the power-generating modules by using the grid connection that is specified for the connection point. This entitlement is subject to completion of preparations, including agreement on the protection and control settings relevant to the connection point between the relevant system operator and the power-generating facility owner. [Art. 34]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 31, p. 43",
+      "RfG (EU) 2016/631, Art. 34, p. 44",
+      "RfG (EU) 2016/631, Art. 30, p. 43"
+    ],
+    "seconds": 62,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 15,
+    "kind": "direct",
+    "question": "What is needed to obtain the final operational notification (FON)?",
+    "answer": "To obtain the final operational notification (FON), the power-generating facility owner must:\n\n- Submit an itemised statement of compliance.\n- Provide an update of applicable technical data, simulation models, and studies as required by Article 35(3) of RfG (EU) 2016/631. This includes using actual measured values during testing [Art. 36(3)].\n\nAdditionally, all incompatibilities identified for the purpose of interim operational notification (ION) status must be removed before a FON can be issued by the relevant system operator [Art. 36(2)].\n[Check: not among the retrieved excerpts: Art. 35]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 36, p. 45",
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 36, p. 45"
+    ],
+    "seconds": 64,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 16,
+    "kind": "direct",
+    "question": "Which compliance tests apply to type D power park modules?",
+    "answer": "Type D power park modules are subject to the compliance tests for type B and C power park modules as specified in Articles 47, 48, and 54-56 of RfG (EU) 2016/631.\n\nFor active power controllability and control range test:\n- The power park module's technical capability to operate at a load level below the setpoint set by the relevant system operator or TSO shall be demonstrated [Art. 48(2)(a)].\n- The test is deemed successful if the following conditions are fulfilled:\n  - The load level of the power park module is kept below the setpoint [Art. 48(2)(b)(i)].\n  - The setpoint is implemented according to the requirements laid down in Article 15(2)(a) [Art. 48(2)(b)(ii)].\n  - The accuracy of the regulation complies with the value specified in point (a) of Article 15(2) [Art. 48(2)(b)(iii)].\n\nFor fault-ride-through capability:\n- Type D power park modules are subject to the fault-ride-through capability compliance simulation, except for the fault-ride-through capability of type B power park modules referred to in Article 54(4) [Art. 56(1)].\n- Instead of all or part of these simulations, the power-generating facility owner may use equipment certificates issued by an authorised certifier, which must be provided to the relevant system operator [Art. 56(2)].\n- The model of the power park module shall demonstrate that it is suitable for simulating the fault-ride-through capability in accordance with point (a) of Article 16(3) [Art. 56(3)].\n- The simulation is deemed successful if the model demonstrates compliance with the conditions set out in point (a) of Article 16(3) [Art. 56(4)].\n[Check: not among the retrieved excerpts: Art. 15, Art. 16, Art. 54]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 49, p. 56",
+      "RfG (EU) 2016/631, Art. 46, p. 52-53",
+      "RfG (EU) 2016/631, Art. 48, p. 53",
+      "RfG (EU) 2016/631, Art. 56, p. 61"
+    ],
+    "seconds": 179,
+    "not_found": false,
+    "values": true,
+    "cited": false,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 17,
+    "kind": "direct",
+    "question": "How can a power-generating facility owner request a derogation from the requirements?",
+    "answer": "A power-generating facility owner, or prospective owner, may request a derogation to one or several requirements of this Regulation for power-generating modules within their facilities by filing a request with the relevant system operator. The request must include:\n\n- An identification of the power-generating facility owner, or prospective owner, and a contact person for any communications [Art. 62(2)(a)].\n- A description of the power-generating module or modules for which a derogation is requested [Art. 62(2)(b)].\n- A reference to the provisions of this Regulation from which a derogation is requested and a detailed description of the requested derogation [Art. 62(2)(c)].\n- Detailed reasoning, with relevant supporting documents and cost-benefit analysis pursuant to the requirements of Article 39 [Art. 62(2)(d)].\n- Demonstration that the requested derogation would have no adverse effect on cross-border trade [Art. 62(2)(e)].\n[Check: not among the retrieved excerpts: Art. 39]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 62, p. 62-63",
+      "RfG (EU) 2016/631, Art. 62, p. 63",
+      "RfG (EU) 2016/631, Art. 63, p. 64",
+      "RfG (EU) 2016/631, Art. 62, p. 63"
+    ],
+    "seconds": 118,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 18,
+    "kind": "direct",
+    "question": "Do the requirements apply to existing power-generating modules?",
+    "answer": "The requirements do not directly apply to existing power-generating modules, but there are conditions under which they may be subject to certain provisions of the Regulation.\n\n- Existing power-generating modules are generally exempt from the requirements unless:\n  - They have been modified significantly and a new connection agreement is required [Art. 4(1)(a)].\n  - A regulatory authority or TSO decides, based on a proposal from the relevant TSO, to make an existing power-generating module subject to all or some of the requirements [Art. 4(1)(b)].\n\n- The relevant TSO may assess the application of provisions every three years and take into account the legitimate expectations of power-generating facility owners [Art. 4(6), Art. 4(7)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 4, p. 9",
+      "RfG (EU) 2016/631, Art. 4, p. 10",
+      "RfG (EU) 2016/631, Art. 4, p. 9-10",
+      "RfG (EU) 2016/631, Art. 3, p. 9"
+    ],
+    "seconds": 116,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 19,
+    "kind": "direct",
+    "question": "¿Qué parámetros de huecos de tensión (fault-ride-through) se exigen a un parque fotovoltaico de tipo D?",
+    "answer": "Los parámetros de huecos de tensión para un parque fotovoltaico de tipo D, según las tablas proporcionadas, son los siguientes:\n\n- **Uret**: 0 (pu) [Table 7.2 | Art. 16]\n- **tclear**: 0,14-0,15 segundos o 0,14-0,25 segundos si la protección del sistema y la operación segura lo requieren [Table 7.2 | Art. 16]\n- **Uclear**: Igual que Uret (pu) [Table 7.2 | Art. 16]\n- **trec1**: tclear [Table 7.2 | Art. 16]\n- **Urec1**: Igual que Uclear (pu) [Table 7.2 | Art. 16]\n- **trec2**: trec1 - 0,7 segundos [Table 7.2 | Art. 16]\n- **Urec2**: 0,85 (pu) o ≥ Uclear (pu) [Table 7.2 | Art. 16]\n- **trec3**: trec2 - 1,5 segundos [Table 7.2 | Art. 16]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 31",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 16, p. 31-32",
+      "RfG (EU) 2016/631, Art. 16, p. 30-31"
+    ],
+    "seconds": 129,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 20,
+    "kind": "direct",
+    "question": "Welche Spannungsbereiche gelten für Erzeugungsanlagen vom Typ D zwischen 110 kV und 300 kV?",
+    "answer": "Für Erzeugungsanlagen vom Typ D mit einer Spannbasis von 110 kV bis 300 kV gelten die folgenden Spannungsbereiche:\n\n- **Baltic Synchronous Area:**\n  - Spannungsbereich = Zeitraum der Betriebsfähigkeit: 0,85 pu - 0,90 pu = 30 Minuten; 0,90 pu - 1,118 pu = Unbegrenzt; 1,118 pu - 1,15 pu = 20 Minuten [Art. 16 (v)]\n\n- **Continental Europe Synchronous Area:**\n  - Spannungsbereich = Zeitraum der Betriebsfähigkeit: 0,85 pu - 0,90 pu = 60 Minuten; 0,90 pu - 1,118 pu = Unbegrenzt; 1,118 pu - 1,15 pu = Zu bestimmen durch jede TSO, aber nicht weniger als 20 Minuten und nicht mehr als 60 Minuten [Art. 16 (v)]\n\n- **Nordic Synchronous Area:**\n  - Spannungsbereich = Zeitraum der Betriebsfähigkeit: 0,90 pu - 1,05 pu = Unbegrenzt; 1,05 pu - 1,10 pu = Zu bestimmen durch jede TSO, aber nicht mehr als 60 Minuten [Art. 16 (v)]\n\n- **Great Britain Synchronous Area:**\n  - Spannungsbereich = Zeitraum der Betriebsfähigkeit: 0,90 pu - 1,10 pu = 15 Minuten [Art. 16 (v)]\n\n- **Ireland and Northern Ireland Synchronous Area:**\n  - Spannungsbereich = Zeitraum der Betriebsfähigkeit: 0,90 pu - 1,118 pu = Unbegrenzt [Art. 16 (v)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 245,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 21,
+    "kind": "direct",
+    "question": "Quelles sont les exigences d'injection rapide de courant de défaut pour les parcs non synchrones de générateurs ?",
+    "answer": "Les parcs non synchrones de générateurs ne sont pas explicitement mentionnés dans les excerpts fournis. Les exigences concernent principalement les modules type B et D, qui sont des modules synchrones ou de parcs de modules de puissance. Donc, ils ne s'appliquent pas aux parcs non synchrones de générateurs.\n\n[Art. 20]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 16, p. 31",
+      "RfG (EU) 2016/631, Art. 16, p. 31-32",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20"
+    ],
+    "seconds": 98,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 22,
+    "kind": "direct",
+    "question": "Under which conditions can a type A power-generating module connect automatically to the network?",
+    "answer": "The relevant TSO shall specify the conditions under which a type A power-generating module is capable of connecting automatically to the network. These conditions include:\n\n- Frequency ranges within which an automatic connection is admissible, and a corresponding delay time.\n- Maximum admissible gradient of increase in active power output.\n\nThese requirements are specified [Art. 13(6)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 17",
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 15, p. 27",
+      "RfG (EU) 2016/631, Art. 30, p. 43"
+    ],
+    "seconds": 63,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 23,
+    "kind": "direct",
+    "question": "How quickly must a type A module cease active power output after an instruction at its input port?",
+    "answer": "The power-generating module shall be equipped with a logic interface (input port) in order to cease active power output within five seconds following an instruction being received at the input port. This is specified by [Art. 13(6)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 17",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 15, p. 27"
+    ],
+    "seconds": 54,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 24,
+    "kind": "direct",
+    "question": "What active power reduction is admissible for a type A module when frequency falls below 49 Hz?",
+    "answer": "The admissible active power reduction from maximum output with falling frequency below 49 Hz for a type A module is 2% of the maximum capacity at 50 Hz per 1 Hz frequency drop, as specified by the relevant TSO in its control area [Art. 13(4)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 17",
+      "RfG (EU) 2016/631, Art. 13, p. 14-15",
+      "RfG (EU) 2016/631, Art. 15, p. 22",
+      "RfG (EU) 2016/631, Art. 13, p. 16"
+    ],
+    "seconds": 147,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 25,
+    "kind": "direct",
+    "question": "What interface must a type B module have to reduce its active power output?",
+    "answer": "A type B power-generating module must be equipped with an interface (input port) in order to be able to reduce active power output following an instruction at the input port. This is specified by [Art. 14(2)(a)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 17, p. 32",
+      "RfG (EU) 2016/631, Art. 13, p. 17",
+      "RfG (EU) 2016/631, Art. 20, p. 35"
+    ],
+    "seconds": 75,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 26,
+    "kind": "direct",
+    "question": "In which priority order must a type B module organise its protection and control devices?",
+    "answer": "The power-generating facility owner shall organise its protection and control devices in accordance with the following priority ranking (from highest to lowest):\n\n(i) network and power-generating module protection;\n(ii) synthetic inertia, if applicable;\n(iii) frequency control (active power adjustment);\n(iv) power restriction; and\n(v) power gradient constraint;\n\n[Art. 14(c)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 21",
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20"
+    ],
+    "seconds": 93,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 27,
+    "kind": "direct",
+    "question": "Who sets the conditions for a type B module to reconnect after an incidental disconnection, and are automatic reconnection systems allowed?",
+    "answer": "The conditions under which a type B power-generating module is capable of reconnecting to the network after an incidental disconnection caused by a network disturbance shall be specified by the relevant TSO. Installation of automatic reconnection systems shall be subject both to prior authorisation by the relevant system operator and to the reconnection conditions specified by the relevant TSO.\n\n[Art. 14(4)(a)] [Art. 14(4)(b)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 20, p. 35-36",
+      "RfG (EU) 2016/631, Art. 15, p. 25-26",
+      "RfG (EU) 2016/631, Art. 17, p. 32"
+    ],
+    "seconds": 83,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 28,
+    "kind": "direct",
+    "question": "In frequency sensitive mode, what are the maximum initial delay and the full activation time of the active power response?",
+    "answer": "The maximum initial delay \\( t_1 \\) and the full activation time \\( t_2 \\) for the active power frequency response in frequency sensitive mode are as follows:\n\n- For power-generating modules with inertia, the maximum admissible initial delay \\( t_1 \\) is 2 seconds. [Art. 15(v)]\n- The maximum admissible choice of full activation time \\( t_2 \\), unless longer activation times are allowed by the relevant TSO for reasons of system stability, is 30 seconds. [Art. 15(vii)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 15, p. 24",
+      "RfG (EU) 2016/631, Art. 15, p. 23-24",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23"
+    ],
+    "seconds": 130,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 29,
+    "kind": "direct",
+    "question": "What frequency response insensitivity is allowed in frequency sensitive mode?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 4 (frequency sensitive mode) [Art. 15]:\n- Active power range related to maximum capacity |ΔP1|/Pmax | 1,5-10 %\n- Frequency response insensitivity | Δfi | 10-30 mHz\n- Frequency response insensitivity | Δfi/fn | 0,02-0,06 %\n- Frequency response deadband | 0-500 mHz\n- Droop s1 | 2-12 %",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 23-24"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 30,
+    "kind": "direct",
+    "question": "Is black start capability mandatory for type C power-generating modules?",
+    "answer": "Black start capability is not mandatory for type C power-generating modules, but it can be required by a Member State to ensure system security. According to [Art. 15(5)(i)], black start capability is not mandatory without prejudice to the Member State's rights to introduce obligatory rules in order to ensure system security.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 18, p. 32"
+    ],
+    "seconds": 106,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 31,
+    "kind": "direct",
+    "question": "Which frequency control modes must a type C module be able to operate in during island operation?",
+    "answer": "A type C power-generating module must be capable of operating in LFSM-O and LFSM-U during island operation, as specified in point (c) of paragraph 2 and Article 13(2). [Art. 15(b)(i)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 26-27",
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22",
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 97,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 32,
+    "kind": "direct",
+    "question": "What is required for quick re-synchronisation of a type C power-generating module?",
+    "answer": "For quick re-synchronisation of a type C power-generating module, it must be capable of quick re-synchronisation in line with the protection strategy agreed between the relevant system operator in coordination with the relevant TSO and the power-generating facility.\n\n[Art. 15(4)(c)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 27",
+      "RfG (EU) 2016/631, Art. 15, p. 26-27",
+      "RfG (EU) 2016/631, Art. 32, p. 43-44",
+      "RfG (EU) 2016/631, Art. 18, p. 32"
+    ],
+    "seconds": 137,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 33,
+    "kind": "direct",
+    "question": "Which quantities must the fault recording facility of a type C module record?",
+    "answer": "The fault recording facility of a type C module shall record the following parameters:\n— voltage,\n— active power,\n— reactive power, and\n— frequency.\n[Art. 15(6)(b)(i)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 27",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19"
+    ],
+    "seconds": 147,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 34,
+    "kind": "direct",
+    "question": "What simulation models must a type C power-generating facility owner provide?",
+    "answer": "The type C power-generating facility owner must provide simulation models that properly reflect the behavior of the power-generating module in both steady-state and dynamic simulations (50 Hz component) or in electromagnetic transient simulations, as requested by the relevant system operator or TSO [Art. 15(3)(i)]. Additionally, these models shall be verified against the results of compliance tests referred to in Chapters 2, 3, and 4 of Title IV, and the power-generating facility owner must notify the results of the verification to the relevant system operator or relevant TSO [Art. 15(3)(c)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 52, p. 57",
+      "RfG (EU) 2016/631, Art. 15, p. 28",
+      "RfG (EU) 2016/631, Art. 15, p. 27-28",
+      "RfG (EU) 2016/631, Art. 55, p. 59"
+    ],
+    "seconds": 150,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 35,
+    "kind": "direct",
+    "question": "Who sets the ramping limits of active power output for type C modules?",
+    "answer": "The relevant system operator shall specify, in coordination with the relevant TSO, minimum and maximum limits on rates of change of active power output (ramping limits) in both an up and down direction of change of active power output for a power-generating module.\n\n[Art. 15(e)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 28",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 15, p. 25-26"
+    ],
+    "seconds": 180,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 36,
+    "kind": "reference",
+    "question": "What does Table 2 of the RfG specify for Continental Europe?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13]:\n- Continental Europe | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = To be specified by each TSO, but not less than 30 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than the period for 47,5 Hz-48,5 Hz; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 30 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 37,
+    "kind": "direct",
+    "question": "When may a type D power-generating module be synchronised with the network?",
+    "answer": "Type D power-generating modules shall be synchronised with the network only after authorisation by the relevant system operator, as specified in [Art. 16(4)(a)]. The power-generating facility owner is responsible for performing the synchronisation.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 31-32",
+      "RfG (EU) 2016/631, Art. 16, p. 28-29",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 16, p. 30-31"
+    ],
+    "seconds": 118,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 38,
+    "kind": "direct",
+    "question": "What voltage control system must a type B synchronous power-generating module have?",
+    "answer": "A type B synchronous power-generating module shall be equipped with a permanent automatic excitation control system that can provide constant alternator terminal voltage at a selectable setpoint without instability over the entire operating range of the synchronous power-generating module. [Art. 17(2)(b)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 17, p. 32",
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 19, p. 34",
+      "RfG (EU) 2016/631, Art. 14, p. 18"
+    ],
+    "seconds": 114,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 39,
+    "kind": "direct",
+    "question": "When must a type D synchronous power-generating module have a power system stabiliser?",
+    "answer": "Type D synchronous power-generating modules shall fulfil the following additional requirements in relation to voltage stability:\n- The agreement referred to in subparagraph (a) of Article 19(2) shall cover the specifications and performance of an automatic voltage regulator (‘AVR’) with regard to steady-state voltage and transient voltage control and the specifications and performance of the excitation control system. This includes a power system stabiliser (PSS) function to attenuate power oscillations, if the synchronous power-generating module size is above a value of maximum capacity specified by the relevant TSO.\n\nThe requirement for a PSS function comes from [Art. 19(2)(b)(iv)] of the provided excerpts.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 17, p. 32",
+      "RfG (EU) 2016/631, Art. 16, p. 31-32",
+      "RfG (EU) 2016/631, Art. 19, p. 34",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20"
+    ],
+    "seconds": 137,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 40,
+    "kind": "direct",
+    "question": "Which reactive power control modes must a type C power park module provide?",
+    "answer": "The type C power park module shall be capable of providing reactive power automatically by either voltage control mode, reactive power control mode or power factor control mode. This is specified in [Art. 21 (d)(i)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 36",
+      "RfG (EU) 2016/631, Art. 21, p. 38-39"
+    ],
+    "seconds": 89,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 41,
+    "kind": "direct",
+    "question": "During faults, how fast must active power contribution be established if the TSO gives it priority over reactive power?",
+    "answer": "During faults, if the TSO gives priority to active power contribution over reactive power, this provision has to be established no later than 150 ms from the fault inception. This is specified in [Art. 21(e)] of RfG (EU) 2016/631.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 2, p. 8"
+    ],
+    "seconds": 121,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 42,
+    "kind": "direct",
+    "question": "Can the TSO require power park modules to contribute to power oscillation damping?",
+    "answer": "The TSO can require power park modules to contribute to power oscillation damping. This is specified in [Art. 21(e)]: \"with regard to power oscillations damping control, if specified by the relevant TSO a power park module shall be capable of contributing to damping power oscillations.\"",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 15, p. 27-28",
+      "RfG (EU) 2016/631, Art. 20, p. 35-36",
+      "RfG (EU) 2016/631, Art. 25, p. 40"
+    ],
+    "seconds": 78,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 43,
+    "kind": "direct",
+    "question": "With what accuracy must a type C power park module control reactive power in reactive power control mode?",
+    "answer": "The type C power park module must control the reactive power at the connection point to an accuracy within plus or minus 5 MVAr or plus or minus 5 % (whichever is smaller) of the full reactive power.\n\n[Art. 21(v)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 36"
+    ],
+    "seconds": 122,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 44,
+    "kind": "direct",
+    "question": "Which articles of the RfG apply to a type D power park module?",
+    "answer": "Articles with technical requirements for a type D power park module: 13, 14, 15, 16, 20, 21, 22 (Art. 5 and the articles of each type).",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 20, p. 35"
+    ],
+    "seconds": 3,
+    "not_found": false,
+    "values": true,
+    "cited": false,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 45,
+    "kind": "reference",
+    "question": "What values does Table 3.2 give for Uret and tclear?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 3.2 (power park modules of type B and C, and type D connected below 110 kV) [Art. 14]:\n- Uret: 0,05-0,15 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret-0,15 | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 19-20"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 46,
+    "kind": "direct",
+    "question": "What is the definition of a power park module?",
+    "answer": "A power park module (PPM) or PPM is defined as \"a unit or ensemble of units generating electricity, which is either non-synchronously connected to the network or connected through power electronics, and that also has a single connection point to a transmission system, distribution system including closed distribution system or HVDC system.\" [Art. 21]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 2, p. 6",
+      "RfG (EU) 2016/631, Art. 21, p. 38-39",
+      "RfG (EU) 2016/631, Art. 21, p. 39",
+      "RfG (EU) 2016/631, Art. 21, p. 39"
+    ],
+    "seconds": 118,
+    "not_found": false,
+    "values": true,
+    "cited": false,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 47,
+    "kind": "reference",
+    "question": "What does Table 6.1 specify for Continental Europe?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16]:\n- Continental Europe | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 60 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 48,
+    "kind": "direct",
+    "question": "How does the RfG define fast fault current?",
+    "answer": "Fast fault current is defined as a current injected by a power park module or HVDC system during and after a voltage deviation caused by an electrical fault with the aim of identifying a fault by network protection systems at the initial stage of the fault, supporting system voltage retention at a later stage of the fault and system voltage restoration after fault clearance. [Art. 20]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 2, p. 6-7",
+      "RfG (EU) 2016/631, Art. 16, p. 30-31"
+    ],
+    "seconds": 117,
+    "not_found": false,
+    "values": true,
+    "cited": false,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 49,
+    "kind": "direct",
+    "question": "Who approves the national thresholds for type B, C and D modules?",
+    "answer": "The relevant TSO shall propose maximum capacity thresholds for types B, C, and D power-generating modules, which shall be subject to approval by the relevant regulatory authority or, where applicable, the Member State. This is stated in [Art. 5(3)] of RfG (EU) 2016/631.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 11",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 31, p. 43"
+    ],
+    "seconds": 163,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 50,
+    "kind": "direct",
+    "question": "What is the maximum cumulative capacity of power-generating modules classified as emerging technologies?",
+    "answer": "The maximum level of cumulative maximum capacity of power-generating modules classified as emerging technologies in a synchronous area shall be 0,1 % of the annual maximum load in 2014 in that synchronous area. [Art. 67(1)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 67, p. 66",
+      "RfG (EU) 2016/631, Art. 66, p. 65-66",
+      "RfG (EU) 2016/631, Art. 70, p. 67",
+      "RfG (EU) 2016/631, Art. 69, p. 66-67"
+    ],
+    "seconds": 96,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 51,
+    "kind": "direct",
+    "question": "Which requirements apply to power-generating modules classified as emerging technologies?",
+    "answer": "The requirements of RfG (EU) 2016/631 do not apply to power-generating modules classified as an emerging technology, with the exception of Article 30, in accordance with the procedures set out in this Title [Art. 66]. \n\nEmerging technologies must meet certain conditions and be subject to specific regulatory processes:\n- They must be of type A.\n- They must be a commercially available power-generating module technology.\n- The accumulated sales within a synchronous area at the time of application for classification as an emerging technology must not exceed 25% of the maximum level of cumulative maximum capacity established pursuant to Article 67(1) [Art. 66].\n\nAdditionally, if the cumulative maximum capacity of all power-generating modules classified as emerging technologies connected to networks exceeds the threshold established in Article 67, the classification as an emerging technology shall be withdrawn by the relevant regulatory authority [Art. 70]. \n\nThe regulatory authorities must decide on the classification within 12 months of the entry into force of this Regulation and publish a list of approved modules [Art. 69].\n\nArticle 67 establishes the threshold for cumulative maximum capacity as 0.1% of the annual maximum load in 2014 in that synchronous area, adjusted by the ratio of annual electrical energy generated in 2014 in each Member State to the total annual electrical energy generated in the respective synchronous area [Art. 67].\n[Check: not among the retrieved excerpts: Art. 30]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 66, p. 65-66",
+      "RfG (EU) 2016/631, Art. 70, p. 67",
+      "RfG (EU) 2016/631, Art. 69, p. 66-67",
+      "RfG (EU) 2016/631, Art. 67, p. 66"
+    ],
+    "seconds": 161,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 52,
+    "kind": "direct",
+    "question": "Since when do the requirements of Regulation (EU) 2016/631 apply?",
+    "answer": "The requirements of Regulation (EU) 2016/631 shall apply from three years after its publication, as stated in [Art. 72].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 3, p. 9",
+      "RfG (EU) 2016/631, Art. 72, p. 68",
+      "RfG (EU) 2016/631, Art. 7, p. 12",
+      "RfG (EU) 2016/631, Art. 58, p. 61"
+    ],
+    "seconds": 55,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 53,
+    "kind": "direct",
+    "question": "When must a type D facility owner with a FON request a limited operational notification?",
+    "answer": "A type D power-generating facility owner must apply to the relevant system operator for a limited operational notification (LON) if they reasonably expect circumstances described in paragraph 1 of Article 37(2) to persist for more than three months. Specifically, these circumstances include:\n\n- The facility is temporarily subject to either significant modification or loss of capability affecting its performance; [Art. 37(2)(a)]\n- Equipment failure leading to non-compliance with some relevant requirements; [Art. 37(2)(b)]\n\nThe LON must be issued by the relevant system operator and contain information on unresolved issues, responsibilities, timescales for expected solutions, and a maximum period of validity not exceeding 12 months, which may be shorter with possible extension if substantial progress towards full compliance is demonstrated. [Art. 37(3)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 37, p. 45-46",
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 36, p. 45"
+    ],
+    "seconds": 108,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 54,
+    "kind": "direct",
+    "question": "How is the LFSM-O response of a type C power park module tested?",
+    "answer": "The LFSM-O response of a type C power park module is tested by compliance simulations as described in Article 55(2) of RfG (EU) 2016/631.\n\n- The power park module's capability to modulate active power at high frequency in accordance with point (c) of Article 15(2) shall be demonstrated [Art. 55, para. 2(a)].\n- The simulation shall be carried out by simulating low frequency steps and ramps reaching maximum capacity, taking into account the droop settings and the deadband [Art. 55, para. 2(b)].\n- The simulation shall be deemed successful in the event that:\n  - The simulation model of the power park module is validated against the compliance test for LFSM-U response set out in Article 48(3) [Art. 55, para. 2(c)(i)].\n  - Compliance with the requirement laid down in point (c) of Article 15(2) is demonstrated [Art. 55, para. 2(c)(ii)].\n[Check: not among the retrieved excerpts: Art. 15, Art. 48]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 47, p. 53",
+      "RfG (EU) 2016/631, Art. 54, p. 58-59",
+      "RfG (EU) 2016/631, Art. 55, p. 59",
+      "RfG (EU) 2016/631, Art. 51, p. 56"
+    ],
+    "seconds": 154,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": true,
+    "correct": false
+  },
+  {
+    "id": 55,
+    "kind": "reference",
+    "question": "What are the Uret and tclear values in Table 7.2?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 7.2 (power park modules of type D connected at or above 110 kV) [Art. 16]:\n- Uret: 0 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 56,
+    "kind": "reference",
+    "question": "What does Table 9 specify for Continental Europe?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 9 (reactive power capability at maximum capacity, power park modules of type C and D) [Art. 21]:\n- Continental Europe | Maximum range of Q/Pmax: 0,75 | Maximum range of steady-state voltage level in PU: 0,225",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36-37"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 57,
+    "kind": "reference",
+    "question": "What does Table 11 specify for offshore power park modules in Continental Europe?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 11 (reactive power capability at maximum capacity, AC-connected offshore power park modules) [Art. 25]:\n- Continental Europe | Maximum range of Q/Pmax: 0,75 | Maximum range of steady-state voltage level in PU: 0,225",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 25, p. 42"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 58,
+    "kind": "direct",
+    "question": "What is the remuneration for providing frequency containment reserve in Germany?",
+    "answer": "The provided excerpts do not address the remuneration for providing frequency containment reserve in Germany. [Art. 13], [Art. 15] focus on technical requirements for power-generating modules but do not mention remuneration policies.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 15, p. 22"
+    ],
+    "seconds": 110,
+    "not_found": true,
+    "values": null,
+    "cited": null,
+    "correct": true
+  },
+  {
+    "id": 59,
+    "kind": "direct",
+    "question": "What is the maximum noise level allowed for wind turbines?",
+    "answer": "The provided excerpts do not address the maximum noise level allowed for wind turbines. Therefore, they do not address it and no citation can be provided.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 17",
+      "RfG (EU) 2016/631, Art. 25, p. 42",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11"
+    ],
+    "seconds": 99,
+    "not_found": true,
+    "values": null,
+    "cited": null,
+    "correct": true
+  },
+  {
+    "id": 60,
+    "kind": "direct",
+    "question": "What are the grid connection fees for a solar plant in Spain?",
+    "answer": "The provided excerpts do not address grid connection fees for a solar plant in Spain or any other financial aspects related to grid connections. Therefore, they do not address the question.\n\n[Citation: None]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 25, p. 40",
+      "RfG (EU) 2016/631, Art. 71, p. 67",
+      "RfG (EU) 2016/631, Art. 23, p. 40",
+      "RfG (EU) 2016/631, Art. 1, p. 4-5"
+    ],
+    "seconds": 69,
+    "not_found": true,
+    "values": null,
+    "cited": null,
+    "correct": true
+  },
+  {
+    "id": 61,
+    "kind": "paraphrase",
+    "question": "If grid frequency drops to 48 Hz in Continental Europe, how long must my plant stay online?",
+    "answer": "Value read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13], Continental Europe:\n- 47,5 Hz-48,5 Hz: To be specified by each TSO, but not less than 30 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 62,
+    "kind": "paraphrase",
+    "question": "How long can a type D module connected at 220 kV run at 1.12 pu in Continental Europe before it may trip?",
+    "answer": "Value read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16], Continental Europe:\n- 1,118 pu-1,15 pu: To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 63,
+    "kind": "paraphrase",
+    "question": "How big must a generator be to count as type C in Great Britain?",
+    "answer": "A generator must have a maximum capacity at or above 50 MW to count as type C in Great Britain, according to [Art. 5(2)(c) RfG (EU) 2016/631].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22",
+      "RfG (EU) 2016/631, Art. 16, p. 29-30",
+      "RfG (EU) 2016/631, Art. 15, p. 27"
+    ],
+    "seconds": 113,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 64,
+    "kind": "paraphrase",
+    "question": "At what frequency does a plant start cutting power because of over-frequency?",
+    "answer": "The relevant TSO may specify the frequency threshold at which a power-generating module starts providing active power frequency response due to over-frequency, with this threshold being between 50.2 Hz and 50.5 Hz inclusive.\n\n[Art. 13(2)(c)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 2, p. 7",
+      "RfG (EU) 2016/631, Art. 13, p. 15-16",
+      "RfG (EU) 2016/631, Art. 15, p. 25"
+    ],
+    "seconds": 87,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 65,
+    "kind": "paraphrase",
+    "question": "Does a solar plant have to stay connected during a short circuit on the grid?",
+    "answer": "A solar plant (type B or D power-generating module) must be capable of staying connected to the network and continuing to operate stably after a secured fault, as specified by the relevant TSO in terms of a voltage-against-time profile at the connection point [Art. 14(3)(a)]. The lower limit of this profile is defined using parameters set out in Figure 3 and within the ranges specified in Tables 3.1 or 3.2 depending on whether the plant is connected below or above 110 kV, respectively [Art. 14(3)(a) and Art. 16(3)(a)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 16, p. 31-32",
+      "RfG (EU) 2016/631, Art. 16, p. 30-31"
+    ],
+    "seconds": 146,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 66,
+    "kind": "paraphrase",
+    "question": "Does the regulation apply to battery storage systems?",
+    "answer": "The regulation does not apply to storage devices except for pump-storage power-generating modules in accordance with Article 6(2). Therefore, battery storage systems are not covered by this regulation.\n\n[Art. 14 (b)] [Art. 15 (d)] [Art. 3 (d)]\n[Check: not among the retrieved excerpts: Art. 6]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 3, p. 9",
+      "RfG (EU) 2016/631, Art. 14, p. 20",
+      "RfG (EU) 2016/631, Art. 15, p. 28",
+      "RfG (EU) 2016/631, Art. 14, p. 21"
+    ],
+    "seconds": 91,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 67,
+    "kind": "details",
+    "question": "We are building a 40 MW PV plant with Chinese inverters near Madrid, connected at 66 kV, and the client is in a hurry. Which type of module is it under the limits of the RfG?",
+    "answer": "The project involves a 40 MW PV plant connected at 66 kV, which falls within the category of type B power-generating modules according to Article 5(2)(b) of RfG (EU) 2016/631, as it is below 110 kV and has a capacity of 40 MW, which is at or above the threshold for type B in Continental Europe.\n\nThe fault-ride-through requirements for this module are specified by Table 3.2 from Article 14:\n\n- Uret: 0.05-0.15\n- tclear: 0.14-0.15 (or 0.14-0.25 if system protection and secure operation so require)\n- Uclear: Uret - 0.15\n- trec1: tclear\n- Urec1: Uclear\n- trec2: trec1 - 0.7\n- Urec2: 0.85-0.9 and ≥ Uclear\n- trec3: trec2 - 1.5\n\nThese values are applicable as per the excerpts provided, specifically [Art. 14].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 14, p. 20"
+    ],
+    "seconds": 202,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 68,
+    "kind": "details",
+    "question": "Our 120 MW onshore wind farm connects at 132 kV to the transmission network. Which Uret and tclear apply?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 7.2 (power park modules of type D connected at or above 110 kV) [Art. 16]:\n- Uret: 0 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 31"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 69,
+    "kind": "details",
+    "question": "A 30 MW solar farm connected at 33 kV in Continental Europe: what retained voltage must it ride through?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 3.2 (power park modules of type B and C, and type D connected below 110 kV) [Art. 14]:\n- Uret: 0,05-0,15 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: Uret-0,15 | trec1: tclear\n- Urec1: Uclear | trec2: trec1\n- Urec2: 0,85 | trec3: 1,5-3,0",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 19-20"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 70,
+    "kind": "details",
+    "question": "I'm a developer with a 60 MW PV plant at 30 kV in Germany. Do I have to provide synthetic inertia?",
+    "answer": "According to Article 21 of RfG (EU) 2016/631, type C power park modules shall fulfil additional requirements in relation to frequency stability, including the possibility that the relevant TSO may specify that power park modules be capable of providing synthetic inertia during very fast frequency deviations. Therefore, you must check with the relevant TSO in Germany (in this case, ENTSO-E) whether they require synthetic inertia for your module.\n\n[Art. 21]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 21, p. 36",
+      "RfG (EU) 2016/631, Art. 14, p. 21"
+    ],
+    "seconds": 69,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 71,
+    "kind": "details",
+    "question": "We operate a 200 MW wind farm at 380 kV in Continental Europe, owned by a Danish fund. Which voltage ranges apply?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.2 (type D, voltage base 300 kV to 400 kV) [Art. 16]:\n- Continental Europe | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 60 minutes; 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 72,
+    "kind": "ambiguous",
+    "question": "What is the voltage range?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16]:\n- Continental Europe | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 60 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes\n- Nordic | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = 60 minutes\n- Great Britain | Voltage range = Time period for operation: 0,90 pu-1,10 pu = Unlimited\n- Ireland and Northern Ireland | Voltage range = Time period for operation: 0,90 pu-1,118 pu = Unlimited\n- Baltic | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 30 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = 20 minutes\n\nTable 6.2 (type D, voltage base 300 kV to 400 kV) [Art. 16]:\n- Continental Europe | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 60 minutes; 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes\n- Nordic | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = To be specified by each TSO, but not more than 60 minutes\n- Great Britain | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu = 15 minutes\n- Ireland and Northern Ireland | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited\n- Baltic | Voltage range = Time period for operation: 0,88 pu-0,90 pu = 20 minutes; 0,90 pu-1,097 pu = Unlimited; 1,097 pu-1,15 pu = 20 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30",
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 73,
+    "kind": "ambiguous",
+    "question": "What is the frequency range for operation?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13]:\n- Continental Europe | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = To be specified by each TSO, but not less than 30 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than the period for 47,5 Hz-48,5 Hz; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 30 minutes\n- Nordic | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = 30 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than 30 minutes; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 30 minutes\n- Great Britain | Frequency range = Time period for operation: 47,0 Hz-47,5 Hz = 20 seconds; 47,5 Hz-48,5 Hz = 90 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than 90 minutes; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 90 minutes; 51,5 Hz-52,0 Hz = 15 minutes\n- Ireland and Northern Ireland | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = 90 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than 90 minutes; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 90 minutes\n- Baltic | Frequency range = Time period for operation: 47,5 Hz-48,5 Hz = To be specified by each TSO, but not less than 30 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than the period for 47,5 Hz-48,5 Hz; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = To be specified by each TSO, but not less than 30 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 74,
+    "kind": "ambiguous",
+    "question": "What is the fault ride through requirement?",
+    "answer": "Type B power-generating modules shall fulfill the following requirements in relation to robustness:\n- Each TSO shall specify a voltage-against-time-profile in line with Figure 3 at the connection point for fault conditions, which describes the conditions in which the power-generating module is capable of staying connected to the network and continuing to operate stably after the power system has been disturbed by secured faults on the transmission system. [Art. 14(3)(a)]\n\n- The voltage-against-time-profile shall express a lower limit of the actual course of the phase-to-phase voltages on the network voltage level at the connection point during a symmetrical fault, as a function of time before, during and after the fault. [Art. 14(3)(a)(ii)]\n\n- The lower limit referred to in point (ii) shall be specified by the relevant TSO using the parameters set out in Figure 3, and within the ranges set out in Tables 3.1 and 3.2. [Art. 14(3)(a)(iii)]\n\nFor synchronous modules of type B and C, and type D connected below 110 kV:\n- Uret: 0,05-0,3\n- tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: 0,7-0,9\n- trec1: tclear\n- Urec1: Uclear\n- trec2: trec1-0,7\n- Urec2: 0,85-0,9 and ≥ Uclear\n- trec3: trec2-1,5 [Table 3.1]\n\nFor power park modules of type B and C, and type D connected below 110 kV:\nThe specific fault ride through parameters are not explicitly provided in the given excerpts for power park modules. However, it is implied that similar requirements apply as per the general robustness requirements mentioned above. [Art. 14(3)(a)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 21, p. 39"
+    ],
+    "seconds": 170,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 75,
+    "kind": "ambiguous",
+    "question": "How much reactive power must my plant provide?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 8 (reactive power capability at maximum capacity, synchronous modules of type C and D) [Art. 18]:\n- Continental Europe | Maximum range of Q/Pmax: 0,95 | Maximum range of steady-state voltage level in PU: 0,225\n- Nordic | Maximum range of Q/Pmax: 0,95 | Maximum range of steady-state voltage level in PU: 0,150\n- Great Britain | Maximum range of Q/Pmax: 0,95 | Maximum range of steady-state voltage level in PU: 0,225\n- Ireland and Northern Ireland | Maximum range of Q/Pmax: 1,08 | Maximum range of steady-state voltage level in PU: 0,218\n- Baltic | Maximum range of Q/Pmax: 1,0 | Maximum range of steady-state voltage level in PU: 0,220\n\nTable 9 (reactive power capability at maximum capacity, power park modules of type C and D) [Art. 21]:\n- Continental Europe | Maximum range of Q/Pmax: 0,75 | Maximum range of steady-state voltage level in PU: 0,225\n- Nordic | Maximum range of Q/Pmax: 0,95 | Maximum range of steady-state voltage level in PU: 0,150\n- Great Britain | Maximum range of Q/Pmax: 0,66 | Maximum range of steady-state voltage level in PU: 0,225\n- Ireland and Northern Ireland | Maximum range of Q/Pmax: 0,66 | Maximum range of steady-state voltage level in PU: 0,218\n- Baltic | Maximum range of Q/Pmax: 0,80 | Maximum range of steady-state voltage level in PU: 0,220",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 18, p. 33-34",
+      "RfG (EU) 2016/631, Art. 21, p. 36-37"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 76,
+    "kind": "scope",
+    "question": "Does the RfG require grid-forming capability?",
+    "answer": "The RfG does not address grid-forming capability directly. Therefore, there is no specific requirement regarding grid-forming capability as per the provided excerpts. [Art. 13], [Art. 15], [Art. 16] do not mention grid-forming capability.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 31",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 16, p. 30-31",
+      "RfG (EU) 2016/631, Art. 15, p. 25"
+    ],
+    "seconds": 143,
+    "not_found": true,
+    "values": null,
+    "cited": null,
+    "correct": true
+  },
+  {
+    "id": 77,
+    "kind": "yesno",
+    "question": "Is a type A module required to provide LFSM-U?",
+    "answer": "Type A modules are not addressed in the provided excerpts, which only cover Type C power-generating modules. Therefore, they do not address whether a type A module is required to provide LFSM-U. [Art. 15]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 22-23",
+      "RfG (EU) 2016/631, Art. 15, p. 22",
+      "RfG (EU) 2016/631, Art. 15, p. 21-22",
+      "RfG (EU) 2016/631, Art. 4, p. 9"
+    ],
+    "seconds": 82,
+    "not_found": true,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 78,
+    "kind": "yesno",
+    "question": "Can a TSO set a type B threshold higher than the limit in Table 1?",
+    "answer": "No, according to [Art. 5(2)(b) RfG (EU) 2016/631], the TSO can set a threshold for type B power-generating modules that is not above the limits specified in Table 1. The maximum thresholds are as follows:\n\n- Continental Europe: Maximum threshold for type B: 1 MW\n- Great Britain: Maximum threshold for type B: 1 MW\n- Nordic: Maximum threshold for type B: 1,5 MW\n- Ireland and Northern Ireland: Maximum threshold for type B: 0,1 MW\n- Baltic: Maximum threshold for type B: 0,5 MW\n\nTherefore, a TSO cannot set a type B threshold higher than the limits in Table 1. [Art. 5(2)(b) RfG (EU) 2016/631]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 25, p. 40-41",
+      "RfG (EU) 2016/631, Art. 25, p. 40",
+      "RfG (EU) 2016/631, Art. 25, p. 42"
+    ],
+    "seconds": 162,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 79,
+    "kind": "yesno",
+    "question": "Do type D power park modules have to comply with Article 14(2)?",
+    "answer": "Type D power park modules do not have to comply with Article 14(2). [Art. 22]\n[Check: not among the retrieved excerpts: Art. 14]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 22, p. 39-40",
+      "RfG (EU) 2016/631, Art. 21, p. 36",
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 19, p. 34"
+    ],
+    "seconds": 54,
+    "not_found": false,
+    "values": false,
+    "cited": true,
+    "wrong": false,
+    "correct": false
+  },
+  {
+    "id": 80,
+    "kind": "compare",
+    "question": "How do the fault-ride-through Uret ranges differ between synchronous modules and power park modules of type B?",
+    "answer": "The fault-ride-through Uret (retained voltage at the connection point during a fault) ranges differ between synchronous modules and power park modules of type B as follows:\n\nFor synchronous modules:\n- Uret: 0,05-0,3 [Art. 14(v)]\n\nFor power park modules:\n- Uret: 0,05-0,15 [Art. 14(v)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 18-19",
+      "RfG (EU) 2016/631, Art. 16, p. 31",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 20, p. 35"
+    ],
+    "seconds": 93,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 81,
+    "kind": "compare",
+    "question": "Compare the maximum Q/Pmax range of type C power park modules in Continental Europe and the Nordic area.",
+    "answer": "The maximum Q/Pmax range for type C power park modules is:\n- **Continental Europe**: 0,75 [Art. 21(3)(ii)]\n- **Nordic**: 0,95 [Art. 21(3)(ii)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36-37",
+      "RfG (EU) 2016/631, Art. 25, p. 42",
+      "RfG (EU) 2016/631, Art. 18, p. 33-34",
+      "RfG (EU) 2016/631, Art. 21, p. 37-38"
+    ],
+    "seconds": 178,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 82,
+    "kind": "compare",
+    "question": "Which synchronous area has the lowest type B capacity limit?",
+    "answer": "Ireland and Northern Ireland has the lowest type B capacity limit at 0.1 MW. [Art. 5]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 14, p. 18",
+      "RfG (EU) 2016/631, Art. 18, p. 34",
+      "RfG (EU) 2016/631, Art. 18, p. 33-34"
+    ],
+    "seconds": 73,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 83,
+    "kind": "keyword",
+    "question": "LFSM-O threshold",
+    "answer": "The frequency threshold for LFSM-O operation shall be between 50,2 Hz and 50,5 Hz inclusive. This is specified by the relevant TSO for its control area in coordination with the TSOs of the same synchronous area to ensure minimal impacts on neighbouring areas [Art. 13(2)(c)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 15-16",
+      "RfG (EU) 2016/631, Art. 15, p. 22",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11"
+    ],
+    "seconds": 115,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 84,
+    "kind": "keyword",
+    "question": "type D voltage 300-400 kV Continental Europe",
+    "answer": "A power-generating module of type D with a connection point in the Continental Europe synchronous area, operating at a voltage base between 300 kV to 400 kV, must be capable of staying connected to the network and operating within the following voltage ranges and time periods:\n\n- Voltage range: 0.85 pu - 0.90 pu = 60 minutes\n- Voltage range: 0.90 pu - 1.05 pu = Unlimited\n- Voltage range: 1.05 pu - 1.10 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes\n\n[Art. 16(v)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 16, p. 28-29",
+      "RfG (EU) 2016/631, Art. 25, p. 40-41"
+    ],
+    "seconds": 157,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 85,
+    "kind": "keyword",
+    "question": "FSM droop deadband",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 4 (frequency sensitive mode) [Art. 15]:\n- Active power range related to maximum capacity |ΔP1|/Pmax | 1,5-10 %\n- Frequency response insensitivity | Δfi | 10-30 mHz\n- Frequency response insensitivity | Δfi/fn | 0,02-0,06 %\n- Frequency response deadband | 0-500 mHz\n- Droop s1 | 2-12 %",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 23-24"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 86,
+    "kind": "keyword",
+    "question": "EON ION FON",
+    "answer": "EON:\nAn energisation operational notification (EON) shall entitle the power-generating facility owner to energise its internal network and auxiliaries for the power-generating modules by using the grid connection that is specified for the connection point. [Art. 34]\n\nION:\nAn interim operational notification (ION) shall allow a power-generating facility owner, demand facility owner, distribution system operator or HVDC system owner to operate respectively a power-generating module, demand facility, distribution system or HVDC system by using the grid connection for a limited period of time and to initiate compliance tests. [Art. 2]\n\nFON:\nA final operational notification (FON) shall entitle the power-generating facility owner to operate a power-generating module by using the grid connection. A FON shall be issued by the relevant system operator, upon prior removal of all incompatibilities identified for the purpose of ION status and subject to completion of the data and study review process as required by this Article. [Art. 36]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 36, p. 45",
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 34, p. 44"
+    ],
+    "seconds": 125,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 87,
+    "kind": "process",
+    "question": "How long can a type D module stay under an interim operational notification?",
+    "answer": "The maximum period during which the power-generating facility owner may maintain ION status is 24 months. The relevant system operator is entitled to specify a shorter ION validity period.\n\n[Art. 35, para. 4]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 35, p. 45",
+      "RfG (EU) 2016/631, Art. 35, p. 44-45",
+      "RfG (EU) 2016/631, Art. 2, p. 8"
+    ],
+    "seconds": 72,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 88,
+    "kind": "process",
+    "question": "What must an owner submit to get the final operational notification?",
+    "answer": "An owner must submit the following to get the final operational notification (FON):\n\n- An itemised statement of compliance.\n- An update of applicable technical data, simulation models and studies as referred to in points (b), (d) and (e) of Article 35(3), including the use of actual measured values during testing.\n\n[Citation: Art. 36(3)]\n[Check: not among the retrieved excerpts: Art. 35]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 33, p. 44",
+      "RfG (EU) 2016/631, Art. 36, p. 45",
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 2, p. 8"
+    ],
+    "seconds": 61,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 89,
+    "kind": "process",
+    "question": "What is the minimum capacity for a module to be considered significant?",
+    "answer": "According to Article 5 of RfG (EU) 2016/631, the minimum capacity for a module to be considered significant is as follows:\n\n- For type A modules: 0.8 kW or more [Art. 5(a)].\n- For type B, C, and D modules: The threshold proposed by each relevant TSO in accordance with paragraph 3 of Article 5, but not above the limits specified in Table 1 for the respective synchronous area [Art. 5(b), (c), (d)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 16, p. 30",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 14, p. 18"
+    ],
+    "seconds": 143,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 90,
+    "kind": "premise",
+    "question": "Which article obliges type A modules to have black start capability?",
+    "answer": "The excerpts provided do not address type A modules specifically regarding black start capability. Therefore, they do not address the question.\n\n[Art. 15]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 18, p. 32"
+    ],
+    "seconds": 99,
+    "not_found": true,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  }
+]

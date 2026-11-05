@@ -57,7 +57,7 @@ def main():
         print(f"\n{result['answer']}\n\nSources retrieved:")
         for s in result["sources"]:
             print(f"  - {s}")
-        print(f"\n({time.time() - start:.0f} s, model {args.model})")
+        print(f"\n({time.time() - start:.0f} s, {'model ' + args.model if result.get('llm', True) else 'answered by code'})")
 
     elif args.command == "project":
         print(f"Project: {args.mw} MW {args.technology}, {args.kv} kV, {args.area}")

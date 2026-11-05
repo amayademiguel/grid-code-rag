@@ -12,8 +12,11 @@ INDEX_CHUNKS_FILE = INDEX_DIR / "chunks.jsonl"
 
 # Local models served by Ollama (no data leaves the machine)
 EMBED_MODEL = "bge-m3"        # multilingual embedding model
-LLM_MODEL = "qwen2.5:3b"      # small instruction model; "qwen2.5:7b" is better but slower on CPU
+LLM_MODEL = "qwen2.5:7b"      # instruction model; another LLM is this one setting
 LLM_CONTEXT = 8192            # tokens the LLM can read (question + retrieved chunks + answer)
+LLM_MAX_ANSWER = 800          # tokens per answer: without a limit a repetition loop never ends
+LLM_MAX_REPORT = 1500         # tokens per category of the report: a JSON list is longer than an answer
+LLM_REPEAT_PENALTY = 1.1      # above 1 discourages repeating text, also numbers copied from the excerpts
 
 # Chunking
 MAX_CHUNK_CHARS = 1800        # long articles are split into paragraphs up to this size

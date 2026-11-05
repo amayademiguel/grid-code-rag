@@ -13,185 +13,227 @@
   "requirements": [
     {
       "category": "Frequency ranges",
-      "requirement": "With regard to frequency ranges, a power-generating module shall be capable of remaining connected to the network and operate within the frequency ranges and time periods specified in Table 2.",
-      "value": "Minimum time periods for which a power-generating module has to be capable of operating on different frequencies, deviating from a nominal value, without disconnecting from the network.",
-      "conditions": "Synchronous area",
-      "article": "Art. 13, p. 14"
+      "requirement": "Minimum time periods for which a power-generating module has to be capable of operating on different frequencies, deviating from a nominal value, without disconnecting from the network.",
+      "value": "47,5 Hz-48,5 Hz: To be specified by each TSO, but not less than 30 minutes; 48,5 Hz-49,0 Hz: To be specified by each TSO, but not less than the period for 47,5 Hz-48,5 Hz; 49,0 Hz-51,0 Hz: Unlimited; 51,0 Hz-51,5 Hz: 30 minutes",
+      "conditions": "Applies to Continental Europe, Nordic, Great Britain, Ireland and Northern Ireland, and Baltic areas.",
+      "article": "[Art. 13]"
     },
     {
       "category": "Frequency ranges",
+      "requirement": "Rate of change of frequency withstand capability.",
+      "value": "Up to a value specified by the relevant TSO, unless disconnection was triggered by rate-of-change-of-frequency-type loss of mains protection.",
+      "conditions": "Applies to type A power-generating modules.",
+      "article": "[Art. 13]"
+    },
+    {
+      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
+      "requirement": "The power-generating module shall be capable of activating the provision of active power frequency response according to figure 1 at a frequency threshold and droop settings specified by the relevant TSO.",
+      "value": "frequency threshold: 50,2 Hz to 50,5 Hz inclusive; droop: 2-12 %",
+      "conditions": "For LFSM-O, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 13]"
+    },
+    {
+      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
+      "requirement": "The relevant TSO may choose to allow within its control area automatic disconnection and reconnection of power-generating modules of Type A at randomised frequencies, ideally uniformly distributed, above a frequency threshold, as determined by the relevant TSO where it is able to demonstrate to the relevant regulatory authority, and with the cooperation of power-generating facility owners, that this has a limited cross-border impact and maintains the same level of operational security in all system states.",
+      "value": "frequency threshold: 50,2 Hz to 50,5 Hz inclusive",
+      "conditions": "For LFSM-O, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 13]"
+    },
+    {
+      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
       "requirement": "In LFSM-U mode, the power-generating module shall be capable of providing a power increase up to its maximum capacity.",
-      "value": "Not found in the provided documents.",
-      "conditions": "LFSM-U mode",
-      "article": "Art. 15, p. 22-23"
-    },
-    {
-      "category": "Frequency ranges",
-      "requirement": "The power-generating module shall be capable of staying connected to the network and operate at rates of change of frequency up to a value specified by the relevant TSO, unless disconnection was triggered by rate-of-change-of-frequency-type loss of mains protection.",
-      "value": "Not found in the provided documents.",
-      "conditions": "Not found in the provided documents.",
-      "article": "Art. 13, p. 14"
-    },
-    {
-      "category": "Frequency ranges",
-      "requirement": "In the event of a frequency step change, the power-generating module shall be capable of activating full active power frequency response, at or above the full line shown in Figure 6 in accordance with the parameters specified by each TSO (which shall aim at avoiding active power oscillations for the power-generating module) within the ranges given in Table 5.",
-      "value": "Not found in the provided documents.",
-      "conditions": "Frequency step change",
-      "article": "Art. 15, p. 23-24"
+      "value": "not specified",
+      "conditions": "For LFSM-U, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 15]"
     },
     {
       "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of activating the provision of active power frequency response according to figure 1 at a frequency threshold and droop settings specified by the relevant TSO.",
-      "value": "50,2 Hz to 50,5 Hz",
-      "conditions": "determined by the relevant TSO for its control area in coordination with the TSOs of the same synchronous area to ensure minimal impacts on neighbouring areas",
-      "article": "Art. 13"
+      "requirement": "The power-generating module shall be capable of providing active power frequency response in accordance with the parameters specified by each relevant TSO within the ranges shown in Table 4.",
+      "value": "Active power range related to maximum capacity: 1,5-10 %; Frequency response insensitivity: 10-30 mHz; Frequency response insensitivity: 0,02-0,06 %; Frequency response deadband: 0-500 mHz; Droop s1: 2-12 %",
+      "conditions": "For frequency sensitive mode, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 15]"
     },
     {
       "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of providing active power frequency response in accordance with the parameters specified by each relevant TSO within the ranges shown in Table 4.",
-      "value": "2-12 %",
-      "conditions": "in case of overfrequency, the active power frequency response is limited by the minimum regulating level, in case of underfrequency, the active power frequency response is limited by maximum capacity, the actual delivery of active power frequency response depends on the operating and ambient conditions of the power-generating module when this response is triggered, in particular limitations on operation near maximum capacity at low frequencies according to paragraphs 4 and 5 of Article 13 and available primary energy sources",
-      "article": "Art. 15"
+      "requirement": "The frequency response deadband of frequency deviation and droop must be able to be reselected repeatedly.",
+      "value": "not specified",
+      "conditions": "For frequency sensitive mode, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 15]"
     },
     {
       "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of activating the provision of active power frequency response at a frequency threshold and with a droop specified by the relevant TSO in coordination with the TSOs of the same synchronous area as follows: the frequency threshold specified by the TSO shall be between 49,8 Hz and 49,5 Hz inclusive, the droop settings specified by the TSO shall be in the range 2-12 %.",
-      "value": "49,8 Hz to 49,5 Hz",
-      "conditions": "determined by the relevant TSO for its control area in coordination with the TSOs of the same synchronous area to ensure minimal impacts on neighbouring areas",
-      "article": "Art. 13"
+      "requirement": "The activation of active power frequency response by the power-generating module shall not be unduly delayed. In the event of any delay greater than two seconds, the power-generating facility owner shall justify it to the relevant TSO.",
+      "value": "not specified",
+      "conditions": "For frequency sensitive mode, in the synchronous area controlled by the relevant TSO.",
+      "article": "[Art. 15]"
     },
     {
-      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of providing active power frequency response in accordance with the parameters specified by each relevant TSO within the ranges shown in Table 4.",
-      "value": "2-12 %",
-      "conditions": "in case of overfrequency, the active power frequency response is limited by the minimum regulating level, in case of underfrequency, the active power frequency response is limited by maximum capacity, the actual delivery of active power frequency response depends on the operating and ambient conditions of the power-generating module when this response is triggered, in particular limitations on operation near maximum capacity at low frequencies according to paragraphs 4 and 5 of Article 13 and available primary energy sources",
-      "article": "Art. 15"
+      "category": "Voltage ranges",
+      "requirement": "A power-generating module shall be capable of remaining connected to the network and operate within the voltage ranges and time periods specified in Tables 6.1 and 6.2.",
+      "value": "0.85 pu-0.90 pu = 60 minutes; 0.90 pu-1.118 pu = Unlimited; 1.118 pu-1.15 pu = To be specified by each TSO, but not less than 20 minutes and not more than 60 minutes (for voltage base 300 kV to 400 kV)",
+      "conditions": "For the 400 kV grid voltage level (or alternatively commonly referred to as 380 kV level), the reference 1 pu value is 400 kV; for other grid voltage levels, the reference 1 pu voltage may differ for each system operator in the same synchronous area.",
+      "article": "[Art. 16]"
     },
     {
-      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of providing active power frequency response in accordance with the parameters specified by each relevant TSO within the ranges shown in Table 4.",
-      "value": "2-12 %",
-      "conditions": "in case of overfrequency, the active power frequency response is limited by the minimum regulating level, in case of underfrequency, the active power frequency response is limited by maximum capacity, the actual delivery of active power frequency response depends on the operating and ambient conditions of the power-generating module when this response is triggered, in particular limitations on operation near maximum capacity at low frequencies according to paragraphs 4 and 5 of Article 13 and available primary energy sources",
-      "article": "Art. 15"
-    },
-    {
-      "category": "Frequency response (LFSM-O / LFSM-U / FSM)",
-      "requirement": "the power-generating module shall be capable of providing active power frequency response in accordance with the parameters specified by each relevant TSO within the ranges shown in Table 4.",
-      "value": "2-12 %",
-      "conditions": "in case of overfrequency, the active power frequency response is limited by the minimum regulating level, in case of underfrequency, the active power frequency response is limited by maximum capacity, the actual delivery of active power frequency response depends on the operating and ambient conditions of the power-generating module when this response is triggered, in particular limitations on operation near maximum capacity at low frequencies according to paragraphs 4 and 5 of Article 13 and available primary energy sources",
-      "article": "Art. 15"
+      "category": "Voltage ranges",
+      "requirement": "A power-generating module shall be capable of remaining connected to the network and operate within the voltage ranges and time periods specified in Tables 6.1 and 6.2.",
+      "value": "0.85 pu-0.90 pu = 30 minutes; 0.90 pu-1.118 pu = Unlimited; 1.118 pu-1.15 pu = 20 minutes (for voltage base 110 kV to 300 kV)",
+      "conditions": "For the Baltic synchronous area, the relevant TSO may require power-generating modules to remain connected to the 400 kV network in the voltage range limits and for the time periods that apply in the Continental Europe synchronous area.",
+      "article": "[Art. 16]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the relevant system operator in coordination with the relevant TSO shall specify the reactive power provision capability requirements in the context of varying voltage.",
-      "value": "the U-Q/Pmax-profile that may take any shape within the boundaries of which the power park module shall be capable of providing reactive power at its maximum capacity.",
-      "conditions": "varying voltage",
-      "article": "Art. 21, p. 36-37"
+      "requirement": "The U-Q/Pmax-profile shall not exceed the U-Q/Pmax-profile envelope, represented by the inner envelope in Figure 8.",
+      "value": "Not specified as a number, but the inner envelope in Figure 8.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the relevant system operator in coordination with the relevant TSO shall specify the reactive power provision capability requirements and shall specify a P-Q/Pmax-profile that may take any shape within the boundaries of which the power park module shall be capable of providing reactive power below maximum capacity.",
-      "value": "the P-Q/Pmax-profile that may take any shape within the boundaries of which the power park module shall be capable of providing reactive power below maximum capacity.",
-      "conditions": "reactive power capability below maximum capacity",
-      "article": "Art. 21, p. 37-38"
+      "requirement": "The dimensions of the U-Q/Pmax-profile envelope (Q/Pmax range and voltage range) shall be within the values specified for each synchronous area in Table 9.",
+      "value": "Q/Pmax range: 0.75 (Continental Europe), 0.95 (Nordic), 0.66 (Great Britain), 0.66 (Ireland and Northern Ireland), 0.80 (Baltic); Voltage range: 0.225 (Continental Europe), 0.150 (Nordic), 0.225 (Great Britain), 0.218 (Ireland and Northern Ireland), 0.220 (Baltic).",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the U-Q/Pmax-profile shall be specified by each relevant system operator in coordination with the relevant TSO in conformity with the following principles:",
-      "value": "the U-Q/Pmax-profile envelope is specified for each synchronous area in Table 9.",
-      "conditions": "U-Q/Pmax profile",
-      "article": "Art. 21, p. 36-37"
+      "requirement": "The position of the U-Q/Pmax-profile envelope shall be within the limits of the fixed outer envelope set out in Figure 8.",
+      "value": "Not specified as a number, but the fixed outer envelope in Figure 8.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the P-Q/Pmax-profile shall be specified by each relevant system operator in coordination with the relevant TSO, in conformity with the following principles:",
-      "value": "the P-Q/Pmax-profile envelope is specified for each synchronous area in Table 9.",
-      "conditions": "P-Q/Pmax profile",
-      "article": "Art. 21, p. 37-38"
+      "requirement": "The P-Q/Pmax-profile shall not exceed the P-Q/Pmax-profile envelope, represented by the inner envelope in Figure 9.",
+      "value": "Not specified as a number, but the inner envelope in Figure 9.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the U-Q/Pmax-profile shall be specified by each relevant system operator in coordination with the relevant TSO in conformity with the following principles:",
-      "value": "the U-Q/Pmax-profile envelope is specified for each synchronous area in Table 9.",
-      "conditions": "U-Q/Pmax profile",
-      "article": "Art. 21, p. 36-37"
+      "requirement": "The Q/Pmax range of the P-Q/Pmax-profile envelope is specified for each synchronous area in Table 9.",
+      "value": "Q/Pmax range: 0.75 (Continental Europe), 0.95 (Nordic), 0.66 (Great Britain), 0.66 (Ireland and Northern Ireland), 0.80 (Baltic).",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Reactive power capability",
-      "requirement": "the P-Q/Pmax-profile shall be specified by each relevant system operator in coordination with the relevant TSO, in conformity with the following principles:",
-      "value": "the P-Q/Pmax-profile envelope is specified for each synchronous area in Table 9.",
-      "conditions": "P-Q/Pmax profile",
-      "article": "Art. 21, p. 37-38"
+      "requirement": "The active power range of the P-Q/Pmax-profile envelope at zero reactive power shall be 1 pu.",
+      "value": "1 pu.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The P-Q/Pmax-profile can be of any shape and shall include conditions for reactive power capability at zero active power.",
+      "value": "Not specified as a number, but the profile can be of any shape.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The power park module shall be capable of providing reactive power at any operating point inside its P-Q/Pmax-profile, if all units of that power park module which generate power are technically available.",
+      "value": "Not specified as a number, but the module shall be capable of providing reactive power at any operating point inside its P-Q/Pmax-profile.",
+      "conditions": "Applicable to all synchronous areas, if all units of the power park module which generate power are technically available.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The power park module shall be capable of moving to any operating point within its P-Q/Pmax profile in appropriate timescales to target values requested by the relevant system operator.",
+      "value": "Not specified as a number, but the module shall be capable of moving to any operating point within its P-Q/Pmax profile in appropriate timescales.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The power park module shall be capable of providing reactive power automatically by either voltage control mode, reactive power control mode or power factor control mode.",
+      "value": "Not specified as a number, but the module shall be capable of providing reactive power automatically by either voltage control mode, reactive power control mode or power factor control mode.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The relevant system operator in coordination with the relevant TSO shall specify the reactive power provision capability requirements and shall specify a P-Q/Pmax-profile that may take any shape within the boundaries of which the power park module shall be capable of providing reactive power below maximum capacity.",
+      "value": "Not specified as a number, but the relevant system operator in coordination with the relevant TSO shall specify the reactive power provision capability requirements and shall specify a P-Q/Pmax-profile that may take any shape within the boundaries of which the power park module shall be capable of providing reactive power below maximum capacity.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
+    },
+    {
+      "category": "Reactive power capability",
+      "requirement": "The reactive power provision capability requirement applies at the connection point. For profile shapes other than rectangular, the voltage range represents the highest and lowest values. The full reactive power range is therefore not expected to be available across the range of steady-state voltages.",
+      "value": "Not specified as a number, but the reactive power provision capability requirement applies at the connection point. For profile shapes other than rectangular, the voltage range represents the highest and lowest values. The full reactive power range is therefore not expected to be available across the range of steady-state voltages.",
+      "conditions": "Applicable to all synchronous areas.",
+      "article": "[Art. 21]"
     },
     {
       "category": "Fault-ride-through",
-      "requirement": "the power-generating module shall be capable of remaining connected to the network and continuing to operate stably when the actual course of the phase-to-phase voltages on the network voltage level at the connection point during a symmetrical fault, given the pre-fault and post-fault conditions in points (iv) and (v) of paragraph 3(a), remain above the lower limit specified in point (ii) of paragraph 3(a), unless the protection scheme for internal electrical faults requires the disconnection of the power-generating module from the network.",
-      "value": "0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
-      "conditions": "symmetrical fault, pre-fault and post-fault conditions in points (iv) and (v) of paragraph 3(a), lower limit specified in point (ii) of paragraph 3(a), protection scheme for internal electrical faults",
-      "article": "Art. 14, p. 19-20"
+      "requirement": "Uret: 0,05-0,3",
+      "value": "0,05-0,3",
+      "conditions": "synchronous modules of type B and C, and type D connected below 110 kV",
+      "article": "Art. 14"
     },
     {
       "category": "Fault-ride-through",
-      "requirement": "the voltage-against-time-profile shall express a lower limit of the actual course of the phase-to-phase voltages on the network voltage level at the connection point during a symmetrical fault, as a function of time before, during and after the fault.",
-      "value": "0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
-      "conditions": "symmetrical fault, using parameters set out in Figure 3 and within the ranges set out in Tables 7.1 and 7.2 for type D power-generating modules connected at or above the 110 kV level, using parameters set out in Figure 3 and within the ranges set out in Tables 3.1 and 3.2 for type D power-generating modules connected below the 110 kV level",
-      "article": "Art. 16, p. 30-31"
+      "requirement": "Uret: 0",
+      "value": "0",
+      "conditions": "synchronous modules of type D connected at or above 110 kV",
+      "article": "Art. 16"
     },
     {
       "category": "Fault-ride-through",
-      "requirement": "the lower limit shall be specified by the relevant TSO, using the parameters set out in Figure 3 and within the ranges set out in Tables 7.1 and 7.2 for type D power-generating modules connected at or above the 110 kV level.",
+      "requirement": "tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
       "value": "0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
-      "conditions": "type D power-generating modules connected at or above the 110 kV level",
-      "article": "Art. 16, p. 30-31"
-    },
-    {
-      "category": "Fault-ride-through",
-      "requirement": "the lower limit shall also be specified by the relevant TSO, using parameters set out in Figure 3 and within the ranges set out in Tables 3.1 and 3.2 for type D power-generating modules connected below the 110 kV level.",
-      "value": "0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
-      "conditions": "type D power-generating modules connected below the 110 kV level",
-      "article": "Art. 16, p. 30-31"
-    },
-    {
-      "category": "Fault-ride-through",
-      "requirement": "the voltage-against-time-profile shall express a lower limit of the actual course of the phase-to-phase voltages on the network voltage level at the connection point during a symmetrical fault, as a function of time before, during and after the fault.",
-      "value": "0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)",
-      "conditions": "using parameters set out in Figure 3 and within the ranges set out in Tables 7.1 and 7.2 for type D power-generating modules connected at or above the 110 kV level, using parameters set out in Figure 3 and within the ranges set out in Tables 3.1 and 3.2 for type D power-generating modules connected below the 110 kV level",
-      "article": "Art. 16, p. 30-31"
+      "conditions": "synchronous and power park modules of type B and C, and type D connected below 110 kV, synchronous modules of type D connected at or above 110 kV",
+      "article": "Art. 14, Art. 16"
     },
     {
       "category": "Fault current and post-fault recovery",
-      "requirement": "the relevant system operator shall specify how and when a voltage deviation is to be determined as well as the end of the voltage deviation",
-      "value": "how and when a voltage deviation is to be determined as well as the end of the voltage deviation",
-      "conditions": "under the following conditions: (i) the power park module shall be capable of activating the supply of fast fault current either by: — ensuring the supply of the fast fault current at the connection point, or — measuring voltage deviations at the terminals of the individual units of the power park module and providing a fast fault current at the terminals of these units;",
-      "article": "RfG (EU) 2016/631, Art. 20, p. 35-36"
+      "requirement": "The relevant system operator in coordination with the relevant TSO shall specify the capability of a power park module to provide fast fault current at the connection point in case of symmetrical (3-phase) faults.",
+      "value": "-",
+      "conditions": "The power park module shall be capable of activating the supply of fast fault current either by ensuring the supply of the fast fault current at the connection point, or by measuring voltage deviations at the terminals of the individual units of the power park module and providing a fast fault current at the terminals of these units.",
+      "article": "Art. 20 (b)"
     },
     {
-      "category": "Fault current and post-fault recovery",
-      "requirement": "the relevant system operator in coordination with the relevant TSO shall specify the characteristics of the fast fault current, including the time domain for measuring the voltage deviation and fast fault current, for which current and voltage may be measured differently from the method specified in Article 2",
-      "value": "the characteristics of the fast fault current, including the time domain for measuring the voltage deviation and fast fault current, for which current and voltage may be measured differently from the method specified in Article 2",
-      "conditions": "under the following conditions: (i) the power park module shall be capable of activating the supply of fast fault current either by: — ensuring the supply of the fast fault current at the connection point, or — measuring voltage deviations at the terminals of the individual units of the power park module and providing a fast fault current at the terminals of these units;",
-      "article": "RfG (EU) 2016/631, Art. 20, p. 35-36"
+      "category": "Protection, control and information exchange",
+      "requirement": "The schemes and settings of the different control devices of the power-generating module that are necessary for transmission system stability and for taking emergency action shall be coordinated and agreed between the relevant TSO, the relevant system operator and the power-generating facility owner.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (ii)]"
     },
     {
-      "category": "Fault current and post-fault recovery",
-      "requirement": "the relevant system operator in coordination with the relevant TSO shall specify the timing and accuracy of the fast fault current, which may include several stages during a fault and after its clearance",
-      "value": "the timing and accuracy of the fast fault current, which may include several stages during a fault and after its clearance",
-      "conditions": "under the following conditions: (i) the power park module shall be capable of activating the supply of fast fault current either by: — ensuring the supply of the fast fault current at the connection point, or — measuring voltage deviations at the terminals of the individual units of the power park module and providing a fast fault current at the terminals of these units;",
-      "article": "RfG (EU) 2016/631, Art. 20, p. 35-36"
+      "category": "Protection, control and information exchange",
+      "requirement": "The schemes and settings of the different control devices of the power-generating module shall be coordinated and agreed between the relevant TSO, the relevant system operator and the power-generating facility owner, and agreement shall be reached before any changes are made.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (iv)]"
     },
     {
-      "category": "Fault current and post-fault recovery",
-      "requirement": "the relevant system operator in coordination with the relevant TSO shall specify the maximum allowed time for active power recovery",
-      "value": "a maximum allowed time for active power recovery",
-      "conditions": "the relevant TSO shall specify the maximum allowed time for active power recovery",
-      "article": "RfG (EU) 2016/631, Art. 20, p. 35-36"
+      "category": "Protection, control and information exchange",
+      "requirement": "The relevant system operator shall specify the schemes and settings necessary to protect the network, taking into account the characteristics of the power-generating module. The protection schemes needed for the power-generating module and the network as well as the settings relevant to the power-generating module shall be coordinated and agreed between the relevant system operator and the power-generating facility owner. The protection schemes and settings for internal electrical faults must not jeopardise the performance of a power-generating module.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (b)]"
     },
     {
-      "category": "Fault current and post-fault recovery",
-      "requirement": "the relevant TSO shall specify the post-fault active power recovery that the power park module is capable of providing",
-      "value": "the post-fault active power recovery that the power park module is capable of providing",
-      "conditions": "the relevant TSO shall specify the post-fault active power recovery that the power park module is capable of providing",
-      "article": "RfG (EU) 2016/631, Art. 20, p. 35-36"
+      "category": "Protection, control and information exchange",
+      "requirement": "The power-generating facility owner shall organise its protection and control devices in accordance with the following priority ranking (from highest to lowest): network and power-generating module protection; synthetic inertia, if applicable; frequency control (active power adjustment); power restriction; and power gradient constraint.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (c)]"
+    },
+    {
+      "category": "Protection, control and information exchange",
+      "requirement": "Power-generating facilities shall be capable of exchanging information with the relevant system operator or the relevant TSO in real time or periodically with time stamping, as specified by the relevant system operator or the relevant TSO.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (d)(i)]"
+    },
+    {
+      "category": "Protection, control and information exchange",
+      "requirement": "The relevant system operator, in coordination with the relevant TSO, shall specify the content of information exchanges including a precise list of data to be provided by the power-generating facility.",
+      "value": "N/A",
+      "conditions": "N/A",
+      "article": "[Art. 14 (d)(ii)]"
     }
   ]
 }

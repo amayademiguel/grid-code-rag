@@ -14,6 +14,10 @@ from rank_bm25 import BM25Okapi
 from .config import EMBED_MODEL, EMBEDDINGS_FILE, INDEX_CHUNKS_FILE, RRF_K, TOP_K
 
 TOKEN_RE = re.compile(r"\w+(?:[-,.]\w+)*")  # \w keeps accented letters (défaut, Spannungsbereiche)
+REFERENCE_RE = re.compile(r"\b(table|figure|article)\s+(\d+(?:\.\d+)?)", re.I)  # "Table 7.2", "Article 16"
+COMPLIANCE_ARTICLES = range(42, 58)  # compliance tests and simulations (Title IV)
+COMPLIANCE_RE = re.compile(r"test|simulat|complian|verif|demonstrat", re.I)
+RECITALS_RE = re.compile(r"recital|preamble|\bwhy\b", re.I)
 
 
 def tokenize(text):
@@ -38,6 +42,17 @@ class Retriever:
                 mask[i] = False
         return mask
 
+    def _on_topic(self, query):
+        """Boolean mask without the compliance articles and the recitals, unless the query asks for them.
+        They repeat the words of the requirements but not their values, so they push the requirements out."""
+        mask = np.ones(len(self.chunks), dtype=bool)
+        for i, c in enumerate(self.chunks):
+            if c["article"] in COMPLIANCE_ARTICLES and not COMPLIANCE_RE.search(query):
+                mask[i] = False
+            if c["article"] is None and not RECITALS_RE.search(query):
+                mask[i] = False
+        return mask
+
     def semantic_ranking(self, query):
         q = np.array(ollama.embed(model=EMBED_MODEL, input=[query])["embeddings"][0], dtype=np.float32)
         scores = self.vectors @ (q / np.linalg.norm(q))  # cosine similarity
@@ -47,6 +62,17 @@ class Retriever:
         scores = self.bm25.get_scores(tokenize(query))
         return list(np.argsort(-scores)), scores
 
+    def reference_ranking(self, query, ranking):
+        """Chunks containing a table, figure or article named in the query ("Table 7.2"), in the
+        order of another ranking. Embeddings do not know what "Table 7.2" refers to."""
+        refs = REFERENCE_RE.findall(query)
+        if not refs:
+            return []
+        patterns = [re.compile(rf"\b{kind}\s+{re.escape(num)}(?![\d.]\d)", re.I) for kind, num in refs]
+        article_refs = {int(num) for kind, num in refs if kind.lower() == "article" and num.isdigit()}
+        return [i for i in ranking
+                if self.chunks[i]["article"] in article_refs or any(p.search(self.chunks[i]["text"]) for p in patterns)]
+
     def search(self, query, k=TOP_K, mode="hybrid", jurisdiction=None, in_force_on=None, articles=None):
         """Return the top-k chunks. mode: 'semantic', 'keyword' or 'hybrid'."""
         allowed = self._allowed(jurisdiction, in_force_on, articles)
@@ -55,6 +81,9 @@ class Retriever:
             rankings.append(self.semantic_ranking(query)[0])
         if mode in ("keyword", "hybrid"):
             rankings.append(self.keyword_ranking(query)[0])
+        if mode == "hybrid":
+            rankings.append(self.reference_ranking(query, rankings[0]))
+            allowed &= self._on_topic(query)
 
         # Reciprocal rank fusion: a chunk ranked high by either method rises to the top
         fused = {}

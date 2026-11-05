@@ -1,0 +1,328 @@
+[
+  {
+    "id": 101,
+    "kind": "table",
+    "question": "What are the voltage ranges for a 150 kV type D module in the Baltic area?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16]:\n- Baltic | Voltage range = Time period for operation: 0,85 pu-0,90 pu = 30 minutes; 0,90 pu-1,118 pu = Unlimited; 1,118 pu-1,15 pu = 20 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 102,
+    "kind": "table",
+    "question": "What is the maximum Q/Pmax of a type D synchronous module in Ireland?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 8 (reactive power capability at maximum capacity, synchronous modules of type C and D) [Art. 18]:\n- Ireland and Northern Ireland | Maximum range of Q/Pmax: 1,08 | Maximum range of steady-state voltage level in PU: 0,218",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 18, p. 33-34"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 103,
+    "kind": "table",
+    "question": "List the frequency ranges and time periods for Great Britain.",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13]:\n- Great Britain | Frequency range = Time period for operation: 47,0 Hz-47,5 Hz = 20 seconds; 47,5 Hz-48,5 Hz = 90 minutes; 48,5 Hz-49,0 Hz = To be specified by each TSO, but not less than 90 minutes; 49,0 Hz-51,0 Hz = Unlimited; 51,0 Hz-51,5 Hz = 90 minutes; 51,5 Hz-52,0 Hz = 15 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 104,
+    "kind": "table",
+    "question": "What is the type C threshold in the Baltic area?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 1 (capacity thresholds of type B, C and D per synchronous area) [Art. 5]:\n- Baltic | Maximum threshold for type B: 0,5 MW | Maximum threshold for type C: 10 MW | Maximum threshold for type D: 15 MW",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 5, p. 10-11"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 105,
+    "kind": "table",
+    "question": "What retained voltage Uret applies to a synchronous type B module?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 3.1 (synchronous modules of type B and C, and type D connected below 110 kV) [Art. 14]:\n- Uret: 0,05-0,3 | tclear: 0,14-0,15 (or 0,14-0,25 if system protection and secure operation so require)\n- Uclear: 0,7-0,9 | trec1: tclear\n- Urec1: Uclear | trec2: trec1-0,7\n- Urec2: 0,85-0,9 and ≥ Uclear | trec3: trec2-1,5",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 14, p. 18-19"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 106,
+    "kind": "table",
+    "question": "What droop is required in frequency sensitive mode?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 4 (frequency sensitive mode) [Art. 15]:\n- Active power range related to maximum capacity |ΔP1|/Pmax | 1,5-10 %\n- Frequency response insensitivity | Δfi | 10-30 mHz\n- Frequency response insensitivity | Δfi/fn | 0,02-0,06 %\n- Frequency response deadband | 0-500 mHz\n- Droop s1 | 2-12 %",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 23-24"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 107,
+    "kind": "table",
+    "question": "What voltage ranges apply to an offshore wind park in the Nordic area?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 10 (AC-connected offshore power park modules) [Art. 25]:\n- Nordic | Voltage range = Time period for operation: 0,90 pu-1,05 pu = Unlimited; 1,05 pu-1,10 pu (*) = 60 minutes; 1,05 pu-1,10 pu (**) = To be specified by each TSO, but not more than 60 minutes\n(*) The voltage base for pu values is below 300 kV.\n(**) The voltage base for pu values is from 300 kV to 400 kV.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 25, p. 40-41"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 108,
+    "kind": "table",
+    "question": "A 90 MW wind farm at 220 kV in Great Britain: which voltage ranges apply?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 6.1 (type D, voltage base 110 kV to 300 kV) [Art. 16]:\n- Great Britain | Voltage range = Time period for operation: 0,90 pu-1,10 pu = Unlimited",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 109,
+    "kind": "table",
+    "question": "What reactive power capability must a type D wind farm offer in Great Britain at maximum capacity?",
+    "answer": "Values read from the tables of the regulation by code, not by the LLM.\n\nTable 9 (reactive power capability at maximum capacity, power park modules of type C and D) [Art. 21]:\n- Great Britain | Maximum range of Q/Pmax: 0,66 | Maximum range of steady-state voltage level in PU: 0,225",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 21, p. 36-37"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 110,
+    "kind": "table",
+    "question": "What active power range applies in frequency sensitive mode?",
+    "answer": "The active power range related to maximum capacity in frequency sensitive mode is ΔP1/Pmax | 1,5-10 %. [Art. 15(4)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 23-24",
+      "RfG (EU) 2016/631, Art. 2, p. 7",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23"
+    ],
+    "seconds": 84,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 111,
+    "kind": "table",
+    "question": "How long may a module at 1.1 pu and 400 kV stay connected in Great Britain?",
+    "answer": "Value read from the tables of the regulation by code, not by the LLM.\n\nTable 6.2 (type D, voltage base 300 kV to 400 kV) [Art. 16], Great Britain:\n- 1,05 pu-1,10 pu: 15 minutes",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 16, p. 29-30"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 112,
+    "kind": "table",
+    "question": "At 47.2 Hz in Great Britain, how long must a module stay connected?",
+    "answer": "Value read from the tables of the regulation by code, not by the LLM.\n\nTable 2 [Art. 13], Great Britain:\n- 47,0 Hz-47,5 Hz: 20 seconds",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15"
+    ],
+    "seconds": 0,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 113,
+    "kind": "text",
+    "question": "Who specifies the rate of change of frequency that a module must withstand?",
+    "answer": "The relevant TSO, in coordination with the relevant system operator, shall specify the rate of change of frequency that a power-generating module must withstand. This is specified under [Art. 13(2)(b)] of RfG (EU) 2016/631 for type A power-generating modules and [Art. 15(2)(v)] for type C power-generating modules.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 14-15",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25",
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 15, p. 23-24"
+    ],
+    "seconds": 106,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 114,
+    "kind": "text",
+    "question": "Must a type C module be able to take part in island operation?",
+    "answer": "A power-generating module must be capable of taking part in island operation if required by the relevant system operator in coordination with the relevant TSO, as specified in [Art. 15(b)(i)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 15, p. 26-27",
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 15, p. 26",
+      "RfG (EU) 2016/631, Art. 15, p. 27"
+    ],
+    "seconds": 85,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 115,
+    "kind": "text",
+    "question": "Can the system operator require fast fault current from a type B power park module?",
+    "answer": "The relevant system operator in coordination with the relevant TSO shall have the right to specify that a power park module be capable of providing fast fault current at the connection point in case of symmetrical (3-phase) faults, under certain conditions.\n\n[Art. 20(2)(b)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 20, p. 35",
+      "RfG (EU) 2016/631, Art. 20, p. 35-36",
+      "RfG (EU) 2016/631, Art. 14, p. 19-20",
+      "RfG (EU) 2016/631, Art. 14, p. 18-19"
+    ],
+    "seconds": 127,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 116,
+    "kind": "text",
+    "question": "Who can require a module to keep operating at minimum regulating level during LFSM-O?",
+    "answer": "The relevant TSO may require that upon reaching minimum regulating level, the power-generating module be capable of either continuing operation at this level or further decreasing active power output. [Art. 13(d)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 13, p. 16",
+      "RfG (EU) 2016/631, Art. 15, p. 22-23",
+      "RfG (EU) 2016/631, Art. 2, p. 7",
+      "RfG (EU) 2016/631, Art. 15, p. 26-27"
+    ],
+    "seconds": 60,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 117,
+    "kind": "text",
+    "question": "Do back-up generators have to comply with the RfG?",
+    "answer": "According to Article 3(2)(b) of the Regulation, back-up generators do not have to comply with the requirements set out in this Regulation if they are installed to provide back-up power and operate in parallel with the system for less than five minutes per calendar month while the system is in normal system state. Parallel operation during maintenance or commissioning tests does not count towards the five-minute limit. [Art. 3(2)(b)]",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 3, p. 9",
+      "RfG (EU) 2016/631, Art. 14, p. 20-21",
+      "RfG (EU) 2016/631, Art. 15, p. 27",
+      "RfG (EU) 2016/631, Art. 15, p. 28"
+    ],
+    "seconds": 109,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 118,
+    "kind": "text",
+    "question": "How long is a limited operational notification valid at most?",
+    "answer": "A limited operational notification (LON) is valid for a maximum period of 12 months. This value is specified in [Art. 37, 3(c)].",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 2, p. 8",
+      "RfG (EU) 2016/631, Art. 37, p. 46",
+      "RfG (EU) 2016/631, Art. 37, p. 45-46",
+      "RfG (EU) 2016/631, Art. 33, p. 44"
+    ],
+    "seconds": 73,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 119,
+    "kind": "text",
+    "question": "Who grants a derogation from the requirements?",
+    "answer": "The regulatory authority grants a derogation from the requirements. This is stated in [Art. 62, RfG (EU) 2016/631], specifically in paragraph 9 which mentions that \"The regulatory authority shall issue a reasoned decision concerning a request for a derogation.\"",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 62, p. 62-63",
+      "RfG (EU) 2016/631, Art. 63, p. 64",
+      "RfG (EU) 2016/631, Art. 62, p. 63",
+      "RfG (EU) 2016/631, Art. 64, p. 65"
+    ],
+    "seconds": 99,
+    "not_found": false,
+    "values": true,
+    "cited": true,
+    "wrong": false,
+    "correct": true
+  },
+  {
+    "id": 120,
+    "kind": "scope",
+    "question": "What are the harmonic distortion limits for a solar inverter?",
+    "answer": "The provided excerpts do not address harmonic distortion limits for a solar inverter. Therefore, they do not address it and no citation can be provided.",
+    "sources": [
+      "RfG (EU) 2016/631, Art. 19, p. 34",
+      "RfG (EU) 2016/631, Art. 5, p. 10-11",
+      "RfG (EU) 2016/631, Art. 18, p. 33-34",
+      "RfG (EU) 2016/631, Art. 15, p. 24-25"
+    ],
+    "seconds": 133,
+    "not_found": true,
+    "values": null,
+    "cited": null,
+    "correct": true
+  }
+]

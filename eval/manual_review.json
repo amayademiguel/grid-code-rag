@@ -1,0 +1,17 @@
+{
+  "answers_file": "eval/answers_v5_7b.json",
+  "note": "Answers read by hand. The automatic check only looks for expected text, so these are its known errors on this run.",
+  "correct_but_rejected": {
+    "18": "Says that the requirements do not directly apply to existing modules, with the exceptions. Right, in words that the check does not expect.",
+    "53": "Gives the condition of Article 37(2) for the limited operational notification. Right, without the word FON.",
+    "79": "Says type D power park modules do not have to comply with Article 14(2). Right, with a citation to flag."
+  },
+  "wrong_but_accepted": {
+    "11": "The recovery part is right, but it adds fault-ride-through values from the wrong tables.",
+    "19": "Gives Table 7.2 with cells of Table 7.1, and leaves out the case below 110 kV.",
+    "20": "The Great Britain row is wrong: Table 6.1 says unlimited, not 15 minutes.",
+    "31": "Gives only LFSM-O and LFSM-U, without frequency sensitive mode. The check matched fsm inside lfsm.",
+    "70": "The rule is right, but it states that ENTSO-E is the TSO in Germany, which is false and not in the excerpts.",
+    "74": "Gives the synchronous values, and says that those of power park modules are not given."
+  }
+}

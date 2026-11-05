@@ -17,20 +17,24 @@ The aim is a tool that, given a question or a project, **finds the relevant requ
 ```
 PDF ──► parsing ──► article-level chunks ──► embeddings (bge-m3) ──► index
                      + metadata                                       │
-question ──► hybrid search (semantic + BM25, metadata filters) ◄──────┘
+question ──► direct table value? ──► answered by code (tables.py), no LLM      │
+                 │ otherwise                                          │
+                 ▼                                                    │
+             hybrid search (semantic + BM25, metadata filters) ◄──────┘
                  │
                  ▼
-        local LLM (qwen2.5) ──► answer with [Art. N] citations / JSON requirements
+        local LLM (qwen2.5:7b) ──► answer with [Art. N] citations / JSON requirements
 ```
 
 | Step | Choice | Why |
 |---|---|---|
-| Parsing | PyMuPDF, running headers removed, table cells re-joined (`Uret: 0`) | PDF tables come out one cell per line |
+| Parsing | PyMuPDF, running headers removed, each table row written with its table, scope and area | PDF tables come out one cell per line, and a row alone does not say what it applies to |
 | Chunking | One chunk per **article**, long articles split by numbered paragraph, each chunk prefixed with its article title | In a regulation the article is the unit of meaning and of citation |
 | Metadata | document, jurisdiction, version, valid-from date, article, pages | Filter by country and by the version in force; cite precisely |
 | Embeddings | `bge-m3` via Ollama (multilingual) | Grid codes are written in national languages |
-| Retrieval | Semantic + BM25 combined with reciprocal rank fusion | Paraphrases ("stay connected during a voltage dip") *and* exact terms ("type D", "LFSM-O") |
-| Generation | `qwen2.5` via Ollama, temperature 0, answer only from context, mandatory citations | Traceability; no outside knowledge |
+| Retrieval | Semantic, BM25 and named tables or articles, combined with reciprocal rank fusion; test articles and recitals left out unless asked for | Paraphrases ("stay connected during a voltage dip"), exact terms ("type D", "LFSM-O") and references ("Table 7.2") |
+| Exact rules | Plain code: module type, applicable articles, table values, the range that contains a value | These are exact tasks, and an LLM can read the wrong row |
+| Generation | `qwen2.5:7b` via Ollama, temperature 0, answer only from context, mandatory citations | Traceability; no outside knowledge |
 | Structured output | JSON schema enforced by Ollama | A requirements list is data, not prose |
 
 ### Project report: an agentic workflow
@@ -47,53 +51,44 @@ The plan is fixed in code rather than left to the model: with a small local mode
 
 ## Results
 
+Measured on a laptop CPU (Intel i7, 16 GB RAM, no GPU).
+
 ### Retrieval
 
-21 test questions (in English, plus one each in Spanish, German and French), each labelled with the article that contains the answer. `python -m eval.evaluate`:
+90 test questions, 86 of them with an article that contains the answer. `python -m eval.evaluate`, share of questions with the right article in the top 4:
 
-| Search | recall@1 | recall@4 | MRR |
+| Questions | Semantic | Keyword (BM25) | Hybrid |
 |---|---|---|---|
-| Semantic | 0.76 | **1.00** | 0.86 |
-| Keyword (BM25) | 0.62 | **1.00** | 0.76 |
-| Hybrid | 0.76 | **1.00** | 0.86 |
+| Direct (48) | 1.00 | 0.94 | 0.98 |
+| Varied wording (29) | 0.86 | 0.83 | 1.00 |
+| Names a table (6) | 0.67 | 1.00 | 1.00 |
+| Other languages (3) | 1.00 | 1.00 | 1.00 |
 
-The correct article reaches the model for every question, including the Spanish, German and French ones (multilingual embeddings). For the French question (*"injection rapide de courant de défaut"*), the semantic search ranks Article 20 first, while BM25 only ranks it third, through the single shared word "injection". The hybrid search keeps it first. The French question also exposed a tokenizer bug: accented letters were dropped ("défaut" became "d" + "faut"). It is now fixed. Caveat: the set is small and was written with knowledge of the article titles, so it is optimistic; a real test set should come from engineers' questions on past projects.
+The right article reaches the model in 85 of 86 questions. `python -m eval.check_tables` compares 258 values of 15 tables with an independent extraction of the PDF, with no differences.
 
-### Generation: where it fails
+### Answers
 
-Both models run locally on a laptop CPU (Intel i7, 16 GB RAM, no GPU).
+Full pipeline, every answer read by hand (`python -m eval.assessment`, corrections and reasons in `eval/manual_review.json`):
 
-**1. A question that is ambiguous for a reason.** *"What are the fault-ride-through parameters Uret and tclear for type D power park modules?"*
+| Questions | Correct | Refused | Wrong or incomplete |
+|---|---|---|---|
+| Direct | 42/48 | 0 | 6 |
+| Names a table | 6/6 | 0 | 0 |
+| Varied wording | 26/29 | 1 | 2 |
+| Other languages | 0/3 | 0 | 3 |
+| **In the regulation** | **74/86 (86 %)** | **1** | **11** |
+| Outside the regulation | 4/4 | | |
 
-The correct answer depends on the connection voltage, which the question does not give. Article 16 sends type D modules connected at 110 kV or above to Table 7.2 (Uret = 0 pu, tclear = 0.14–0.15 s) and those connected below 110 kV to Table 3.2 in Article 14 (Uret = 0.05–0.15 pu).
+22 of the 90 questions are answered by code in about a second. The LLM takes about 2 minutes per answer, and a project report 35 minutes.
 
-| Model | Answer | Time |
-|---|---|---|
-| qwen2.5:3b | Uret 0.05–0.15, tclear 0.14–0.15 s, with no condition and no citation: it took Article 14's value without saying why | ~45 s |
-| qwen2.5:7b | Same values, but states that they apply to type D modules **connected below 110 kV** and cites Table 3.2 | ~3 min |
+**These numbers are optimistic.** The system was tuned on these questions, and I wrote them knowing the regulation. As a check, `eval/questions_holdout.json` has 20 new questions that were not used for tuning: on the first run, 16 of the 19 in the regulation were correct, and the one outside it was declined. Those three errors then led to two fixes in the table reader, so that set is no longer unseen. A real test set should come from engineers' questions on past projects.
 
-The 7B answer is correct for one of the two cases; neither model points out that the answer depends on the voltage. This is why the project report asks for the connection voltage first: the inputs remove the ambiguity before retrieval.
+### Where it still fails
 
-**2. Project report** (`project --mw 300 --kv 220`). Retrieval and classification are identical (type D, Articles 13–16 and 20–22); extraction differs:
-
-| | qwen2.5:3b | qwen2.5:7b |
-|---|---|---|
-| Frequency response | LFSM-O 50.2–50.5 Hz, LFSM-U 49.8–49.5 Hz, droop 2–12 %, but duplicates and some items in the wrong category | Same values, well organised, with conditions |
-| Voltage ranges | missing | Continental Europe values correct (0.85–0.90 pu 60 min, 0.90–1.118 pu unlimited, ...), **plus a wrong row from the Baltic area** |
-| Reactive power | U-Q/Pmax and P-Q/Pmax profiles described, no values | Q/Pmax envelope 0.75 for Continental Europe |
-| Runtime | several minutes | ~32 min |
-
-**3. A question in another language.** *"Quelles sont les exigences d'injection rapide de courant de défaut pour les parcs non synchrones de générateurs ?"*
-
-Retrieval puts Article 20(2), which contains the answer, first. Yet both models answer "Not found in the provided documents" (3B in ~1 min, 7B in ~3 min). They do not link the French terms to the English ones in the excerpt ("fast fault current", "power park module").
-
-Two changes to the same context make it work:
-- Asking the same question in English gives a complete answer citing Art. 20(2).
-- Asking in French with the English terms in brackets gives a correct answer in French.
-
-So the multilingual gap is in generation, not retrieval. A fix is a query-rewriting step that translates the question into the language of the document, or a glossary of grid code terms, before generation.
-
-**What it shows.** Retrieval works; the errors come from (a) cumulative requirements with exceptions (a type D module also follows Article 14, except where Article 16 replaces it), and (b) tables flattened by the PDF parser, which lose which row belongs to which synchronous area. Both are known hard problems of regulatory documents. Ways to address them: project inputs and article filters (already in the workflow), table-aware parsing that keeps each row with its area, a larger model, and checking every value against the cited source with an engineer in the loop.
+- **Other languages:** the search finds the article, but the answer is wrong. The French question gets a refusal, the German one mixes a row, and the Spanish one mixes two tables. Only the search can be relied on outside English.
+- **Wrong details in cited answers:** one answer gets the rule right and adds that ENTSO-E is the TSO in Germany, which is not in the excerpts. A citation does not guarantee that the text is right.
+- **Values in the text of an article:** when asked how LFSM-O and LFSM-U work, the answer leaves out the frequency thresholds, although they are in the excerpts.
+- **Project report:** the JSON is always valid, but the content needs checking. For a power park module at 220 kV, `informe.json` also lists synchronous values and Table 3.1, which is for connections below 110 kV.
 
 ## Usage
 
@@ -102,13 +97,15 @@ Requirements: Python 3.10+, [Ollama](https://ollama.com).
 ```bash
 pip install -r requirements.txt
 ollama pull bge-m3
-ollama pull qwen2.5:3b          # or qwen2.5:7b for better answers
+ollama pull qwen2.5:7b
 
 python app.py build             # download the RfG, chunk it and build the index
 python app.py search "fault ride through type D"
 python app.py ask "Which frequency ranges must a module withstand in Continental Europe?"
 python app.py project --mw 300 --kv 220 --out report.json
 python -m eval.evaluate         # retrieval evaluation
+python -m eval.evaluate_answers # full pipeline on the test questions (hours on a CPU)
+python -m eval.assessment       # results after the review by hand
 ```
 
 ## Project structure
@@ -121,17 +118,18 @@ src/gridrag/ingest.py      PDF parsing and article-level chunking
 src/gridrag/index.py       embeddings
 src/gridrag/retrieve.py    hybrid search with metadata filters
 src/gridrag/answer.py      prompting, citations, structured output
-src/gridrag/rfg_types.py   module classification (Article 5)
+src/gridrag/tables.py      table values read by code, without the LLM
+src/gridrag/rfg_types.py   module classification (Article 5), project facts
 src/gridrag/workflow.py    project requirements report
-eval/                      test questions and retrieval evaluation
+eval/                      test questions, retrieval and answer evaluation, review by hand
 ```
 
 ## Limitations and next steps
 
-- **Tables and figures:** fault-ride-through profiles and P–Q diagrams are figures; only their numeric parameters are captured. A layout-aware parser would handle tables better.
+- **Tables and figures:** fault-ride-through profiles and P–Q diagrams are figures; only their numeric parameters are captured. The table reader covers the direct questions it recognises; the rest go to the LLM.
 - **Cross-references:** "as specified in Article 14(3)" is not followed automatically. An agent with a `get_article` tool, or a graph of references, would.
 - **National codes and versions:** only the European baseline is indexed. The metadata already supports several jurisdictions and validity dates, so a national code (and its updates) can be added and filtered by the version in force.
-- **Evaluation of answers:** retrieval is measured; answer correctness and faithfulness still need a test set validated by engineers.
+- **Evaluation of answers:** answers are checked automatically and by hand, by the author; they still need a test set validated by engineers.
 - **Human in the loop:** the tool points to the requirements and their source; an engineer still validates them.
 
 ## Author
