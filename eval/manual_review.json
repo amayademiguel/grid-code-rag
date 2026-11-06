@@ -2,7 +2,6 @@
   "answers_file": "eval/answers_v5_7b.json",
   "note": "Answers read by Claude, an online AI model, against the text of the regulation. The automatic check only looks for expected text, so these are its known errors on this run.",
   "correct_but_rejected": {
-    "18": "Says that the requirements do not directly apply to existing modules, with the exceptions. Right, in words that the check does not expect.",
     "53": "Gives the condition of Article 37(2) for the limited operational notification. Right, without the word FON.",
     "79": "Says type D power park modules do not have to comply with Article 14(2). Right, with a citation to flag."
   },
@@ -12,6 +11,25 @@
     "20": "The Great Britain row is wrong: Table 6.1 says unlimited, not 15 minutes.",
     "31": "Gives only LFSM-O and LFSM-U, without frequency sensitive mode. The check matched fsm inside lfsm.",
     "70": "The rule is right, but it states that ENTSO-E is the TSO in Germany, which is false and not in the excerpts.",
-    "74": "Gives the synchronous values, and says that those of power park modules are not given."
+    "74": "Gives the synchronous values, and says that those of power park modules are not given.",
+    "10": "Says that modules shall be capable of fast fault current, when the system operator has the right to specify it.",
+    "16": "Lists simulations of Articles 54 to 56 as compliance tests. Article 49 refers to Articles 47 and 48.",
+    "18": "States that a regulatory authority or TSO decides. Article 4(1)(b) says a regulatory authority or the Member State, and it leaves out that 4(1)(a) is only for type C and D.",
+    "46": "The definition is right, but it cites Article 21 instead of Article 2.",
+    "48": "The definition is right, but it cites Article 20 instead of Article 2.",
+    "65": "Links Tables 3.1 and 3.2 to below and above 110 kV: they separate synchronous modules and power park modules.",
+    "66": "The conclusion is right, but two of its three citations are wrong, and in a rerun the right one, Article 3, disappears.",
+    "67": "The type is right, but it gives Table 3.2 with cells of Table 3.1."
+  },
+  "holdout_first_run_wrong": {
+    "105": "Wrong at first run, fixed later in the table reader.",
+    "111": "Wrong at first run, fixed later in the table reader.",
+    "112": "Wrong at first run, fixed later in the table reader.",
+    "113": "Says that the TSO specifies the rate of change of frequency in coordination with the system operator, and cites Article 15. Article 13(1)(b): the TSO specifies it."
+  },
+  "not_counted_as_wrong": {
+    "28": "Gives the delay with inertia, not that the TSO may specify a shorter one without inertia.",
+    "34": "Describes the models, without the list of sub-models.",
+    "63": "Gives the maximum limit of 50 MW as the threshold: the TSO can set a lower one."
   }
 }

@@ -72,23 +72,23 @@ The right article reaches the model in 85 of 86 questions. `python -m eval.check
 
 | Questions | Correct | Refused | Wrong or incomplete |
 |---|---|---|---|
-| Direct | 42/48 | 0 | 6 |
+| Direct | 37/48 | 0 | 11 |
 | Names a table | 6/6 | 0 | 0 |
-| Varied wording | 26/29 | 1 | 2 |
+| Varied wording | 23/29 | 1 | 5 |
 | Other languages | 0/3 | 0 | 3 |
 | Outside the regulation | 4/4 | 0 | 0 |
-| **Used to improve it** | **78/90** | **1** | **11** |
-| **New, first run** | **17/20** | **0** | **3** |
-| **Total** | **95/110** | **1** | **14** |
+| **Used to improve it** | **70/90** | **1** | **19** |
+| **New, first run** | **16/20** | **0** | **4** |
+| **Total** | **86/110** | **1** | **23** |
 
-22 of the 90 questions are answered by code in about a second. The LLM takes about 2 minutes per answer, and a project report 19 minutes.
+By who answers: **written by the LLM, 55/76 correct; read by code, 31/34**. Of the 90 questions, 23 are answered by code in about a second. The LLM takes about 2 minutes per answer, and a project report 19 minutes.
 
-**How far these numbers go.** Each answer was graded by Claude, an online AI model, against the text of the regulation. Claude also helped to build the system and to write the questions, and no engineer has validated the results, so they are indicative. The 90 questions are optimistic because the system was tuned on them. The three errors in the 20 new ones led to two fixes in the table reader, so that set is no longer unseen, and the table gives its first run. A real test set should come from engineers' questions on past projects.
+**How far these numbers go.** Each answer was checked by Claude, an online AI model, against the text of the regulation, and wrong articles and incomplete answers count as wrong. A second reading of all the answers found nine more errors, which these figures already include. Claude also helped to build the system and to write the questions, and the answers have not been reviewed manually, so they are indicative. The 90 questions are optimistic because the system was tuned on them. The first three errors in the 20 new ones led to two fixes in the table reader, so that set is no longer unseen, and the table gives its first run. A real test set should come from engineers' questions on past projects.
 
 ### Where it still fails
 
 - **Other languages:** the search finds the article, but the answer is wrong. The French question gets a refusal, the German one mixes a row, and the Spanish one mixes two tables. Only the search can be relied on outside English.
-- **Wrong details in cited answers:** one answer gets the rule right and adds that ENTSO-E is the TSO in Germany, which is not in the excerpts. A citation does not guarantee that the text is right.
+- **Wrong details in cited answers:** one answer gets the rule right and adds that ENTSO-E is the TSO in Germany, which is not in the excerpts. Other answers mix rows of two tables or cite the wrong article: two definitions are cited to Articles 20 and 21 instead of Article 2. A citation does not guarantee that the text is right.
 - **Values in the text of an article:** when asked how LFSM-O and LFSM-U work, the answer leaves out the frequency thresholds, although they are in the excerpts.
 - **Project report:** the values in tables are read by code, for the case of the project. The rows that the LLM reads from the text need checking: it labels the LFSM-U threshold as LFSM-O, includes an option for type A and leaves some values as N/A.
 
