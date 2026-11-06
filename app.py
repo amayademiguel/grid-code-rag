@@ -7,7 +7,10 @@
 """
 import argparse
 import json
+import re
+import shutil
 import sys
+import textwrap
 import time
 
 from src.gridrag import index, ingest
@@ -17,6 +20,17 @@ from src.gridrag.retrieve import Retriever, cite, excerpt
 from src.gridrag.workflow import project_report
 
 sys.stdout.reconfigure(encoding="utf-8")
+
+
+def show(text):
+    """Print text wrapped to the terminal, line by line, keeping the indent of lists. Only for display."""
+    width = min(shutil.get_terminal_size((100, 24)).columns - 2, 110)
+    for line in text.split("\n"):
+        indent = line[:len(line) - len(line.lstrip())]
+        marker = re.match(r"(-|—|\*|\([a-z]+\)|\d+\.)\s+", line.lstrip())
+        hanging = indent + " " * (marker.end() if marker else 0)
+        print(textwrap.fill(line, width, subsequent_indent=hanging, replace_whitespace=False,
+                            drop_whitespace=True, break_long_words=False, break_on_hyphens=False) if line.strip() else "")
 
 
 def main():
@@ -49,12 +63,12 @@ def main():
 
     elif args.command == "search":
         for c in Retriever().search(args.query, k=args.k, mode=args.mode):
-            print(f"\n--- {cite(c)}  (score {c['score']})\n{excerpt(c['text'], args.query)}")
+            show(f"\n--- {cite(c)}  (score {c['score']})\n{excerpt(c['text'], args.query)}")
 
     elif args.command == "ask":
         start = time.time()
         result = ask(args.question, k=args.k, model=args.model)
-        print(f"\n{result['answer']}\n\nSources retrieved:")
+        show(f"\n{result['answer']}\n\nSources retrieved:")
         for s in result["sources"]:
             print(f"  - {s}")
         print(f"\n({time.time() - start:.0f} s, {'model ' + args.model if result.get('llm', True) else 'answered by code'})")
@@ -62,11 +76,11 @@ def main():
     elif args.command == "project":
         print(f"Project: {args.mw} MW {args.technology}, {args.kv} kV, {args.area}")
         report = project_report(args.mw, args.kv, args.technology, args.area)
-        print(f"\nType {report['type']}: {report['reason']}")
-        print(f"Applicable articles: {report['articles']}\n")
+        show(f"\nType {report['type']}: {report['reason']}")
+        show(f"Applicable articles: {report['articles']}\n")
         for r in report["requirements"]:
-            print(f"[{r['category']}] {r['requirement']}: {r['value']}"
-                  f"{' | ' + r['conditions'] if r['conditions'] else ''}  ({r['article']})")
+            show(f"[{r['category']}] {r['requirement']}: {r['value']}"
+                 f"{' | ' + r['conditions'] if r['conditions'] else ''}  ({r['article']})")
         if args.out:
             with open(args.out, "w", encoding="utf-8") as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
